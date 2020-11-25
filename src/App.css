@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+/* basis code start  */
+html{
+    font-size: 16px;
+ 
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgb(239, 239, 243);
+    
+}
+body{
+    padding: 10px 10vw;
+    font-size: 1.2rem;
+    background: rgb(0, 0, 10);
+    font-family: 'Ubuntu', sans-serif;
+} 
+a{
+    text-decoration: none;
+}
+ul, ol, li{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+/* basis code end  */
+
+
+.app-wrapper {
+    width: 80vw;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 'header header' 'nav main';
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 2fr 10fr;
+    grid-gap: 10px;
+}
+.header, .nav, .main{
+    border-radius: 10px;
+    background: linear-gradient(0deg, rgb(96, 96, 196),rgb(8, 8, 102) );
+    padding: 20px;
+    box-shadow: 5px 5px 7px -2px rgb(182, 230, 120);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* header start  */
+.header{
+    grid-area: header;
+   
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header h1, .header img{
+    display: inline-block;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header h1{
+    font-size: 1.5rem;
+    color: rgb(21, 21, 49);
+    text-shadow: 1px 1px rgb(182, 230, 120);
+    animation: h_head 2s infinite;
 }
-
-.App-link {
-  color: #61dafb;
+@keyframes h_head{
+    10%{
+        color: rgb(44, 235, 6);
+    }
+    30%{
+        color: rgb(21, 21, 49);
+    }
+    100%{
+        color: rgb(21, 21, 49);
+    }
 }
+.header img{
+    width: 30px;
+    height: auto;
+    border-radius: 100%;
+    animation: img_head 3s infinite;
+}
+/* header end  */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.nav{
+    grid-area: nav;
+}
+.main{
+    grid-area: main;
+}
+.avatar{
+    width: 150px;
+    border: 3px solid blue;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgb(182, 230, 120);
 }
