@@ -1,4 +1,4 @@
-/* basis code start  */
+
 html{
     font-size: 16px;
  
@@ -26,9 +26,6 @@ img{
     max-width: 100%;
     height: auto;
 }
-/* basis code end  */
-
-
 .app-wrapper {
     width: 80vw;
     min-height: 100vh;
@@ -44,51 +41,4 @@ img{
     background: linear-gradient(0deg, rgb(96, 96, 196),rgb(8, 8, 102) );
     padding: 20px;
     box-shadow: 5px 5px 7px -2px rgb(182, 230, 120);
-}
-
-/* header start  */
-.header{
-    grid-area: header;
-   
-}
-.header h1, .header img{
-    display: inline-block;
-}
-.header h1{
-    font-size: 1.5rem;
-    color: rgb(21, 21, 49);
-    text-shadow: 1px 1px rgb(182, 230, 120);
-    animation: h_head 2s infinite;
-}
-@keyframes h_head{
-    10%{
-        color: rgb(44, 235, 6);
-    }
-    30%{
-        color: rgb(21, 21, 49);
-    }
-    100%{
-        color: rgb(21, 21, 49);
-    }
-}
-.header img{
-    width: 30px;
-    height: auto;
-    border-radius: 100%;
-    animation: img_head 3s infinite;
-}
-/* header end  */
-
-
-.nav{
-    grid-area: nav;
-}
-.main{
-    grid-area: main;
-}
-.avatar{
-    width: 150px;
-    border: 3px solid blue;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 2px rgb(182, 230, 120);
 }
