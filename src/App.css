@@ -36,9 +36,3 @@ img{
     grid-template-columns: 2fr 10fr;
     grid-gap: 10px;
 }
-.header, .nav, .main{
-    border-radius: 10px;
-    background: linear-gradient(0deg, rgb(96, 96, 196),rgb(8, 8, 102) );
-    padding: 20px;
-    box-shadow: 5px 5px 7px -2px rgb(182, 230, 120);
-}
