@@ -3,10 +3,12 @@ import classes from './Navbar.module.css'
 const Navbar = () => {
   return (
     <nav className={classes.nav}>
-      <div><a href='#'>Profile</a></div>
-      <div><a href='#'>Messages</a></div>
-      <div><a href='#'>News</a></div>
-      <div><a href='#'>Settings</a></div>
+      <ul className={classes.nav__menu}>
+        <li><a href='#'>Profile</a></li>
+        <li><a href='#'>Messages</a></li>
+        <li><a href='#'>News</a></li>
+        <li><a href='#'>Settings</a></li>
+      </ul>
     </nav>
   );
 };
