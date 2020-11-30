@@ -51,7 +51,7 @@
     color: white;
 }
 .header__profile, .search{
-    background: linear-gradient(0deg, rgb(90, 54, 131), rgb(171, 152, 196));
+    background: linear-gradient(0deg, rgb(8, 8, 102), rgb(171, 152, 196));
 }
 .search{
     width: 250px;
@@ -62,6 +62,7 @@
 .shop{
     position: relative;
     text-transform: uppercase;
+    text-shadow: 2px 2px rgb(171, 152, 196);
     z-index: 10000;
 }
 .shop::before{
@@ -70,7 +71,7 @@
     left: -30px;
     content: '';
     border: 50px solid transparent;
-    border-top: 50px solid rgb(90, 54, 131);
+    border-top: 50px solid rgb(8, 8, 102);
     z-index: -10000;
     transform: rotate(15deg);
 }
