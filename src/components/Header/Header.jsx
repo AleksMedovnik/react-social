@@ -17,8 +17,8 @@ const Header = () => {
       <a className={classes.shop} href='#'>shop</a>
 
       <div className={classes.header__profile}>
-        <b>Mark Zuckerberg</b>
-        <img className={classes.header__img} src='https://3dnews.ru/assets/external/illustrations/2020/01/10/1001163/01.jpg' />
+        <b>Alex Medovnik</b>
+        <img className={classes.header__img} src='https://sun2-9.userapi.com/impf/c855028/v855028031/5ff79/ze8qvu_N3VM.jpg?size=200x0&quality=90&crop=100,0,1260,1260&sign=284f59b2db52f5608e4d429cc982572f&ava=1' />
       </div>
     </header>
   );
