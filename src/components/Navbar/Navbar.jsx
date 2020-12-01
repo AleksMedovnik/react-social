@@ -4,8 +4,8 @@ const Navbar = () => {
   return (
     <nav className={classes.nav}>
       <ul className={classes.nav__menu}>
-        <li><a href='#' className={`${classes.nav__item} ${classes.active}`}>Profile</a></li>
-        <li><a href='#' className={classes.nav__item}>Messages</a></li>
+        <li><a href='/profile' className={`${classes.nav__item} ${classes.active}`}>Profile</a></li>
+        <li><a href='/dialogs' className={classes.nav__item}>Messages</a></li>
         <li><a href='#' className={classes.nav__item}>News</a></li>
         <li><a href='#' className={classes.nav__item}>Settings</a></li>
       </ul>
