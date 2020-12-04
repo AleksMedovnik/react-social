@@ -1,9 +1,14 @@
 import classes from './Dialog.module.css';
+import ava from '../../../../images/ava.png';
 
-const Dialog = () => {
+const Dialog = (props) => {
     return (
-        <div className={classes.post}>
-            <div>Всем привет!!!</div>
+        <div className={classes.dialog}>
+            <div className={classes.dialog__item}>
+                <img src={ava} alt="Avatar" />
+                <div>Danylo</div> 
+            </div>
+
         </div>
     )
 
