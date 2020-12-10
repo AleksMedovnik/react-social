@@ -36,3 +36,6 @@ img{
     grid-template-columns: 2fr 10fr;
     grid-gap: 10px;
 }
+.post__input{
+    color: rgb(49, 40, 40);
+}

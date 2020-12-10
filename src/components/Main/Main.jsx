@@ -5,11 +5,11 @@ import Profile from './Profile/Profile';
 
 const Main = () => {
   return (
-    
-      <div className={classes.main}>
-        <Route path='/dialogs' component={Dialogs} />
-        <Route path='/profile' component={Profile} />
-      </div>
+
+    <div className={classes.main}>
+      <Route exact path={["/","/profile"]} component={Profile} />
+      <Route path='/dialogs' component={Dialogs} />
+    </div>
   );
 };
 export default Main;

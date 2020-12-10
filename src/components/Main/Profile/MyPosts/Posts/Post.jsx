@@ -5,7 +5,7 @@ const Post = (props) => {
     return (
         <div className={classes.post}>
             <img src={ava} alt="Avatar" />
-            <div className={classes.post__input}>{props.message}</div>
+            <div className='post__input'>{props.message}</div>
         </div>
     )
 }

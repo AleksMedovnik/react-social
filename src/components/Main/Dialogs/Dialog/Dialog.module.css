@@ -1,17 +1,16 @@
-.dialog{
-    margin: 50px 0;
+
+.dialog__item{
     display: flex;
     align-items: center;
     width: 500px;
+    margin-bottom: 50px;
     padding: 7px;
     border-radius: 5px;
     background: rgb(171, 171, 235);
     box-shadow: 1px 1px 5px 1px gray;
-    
 }
-.dialog__item{
-    display: flex;
-    align-items: center;
+.dialog__item>div{
+    color: black;
 }
 .dialog img{
     width: 30px;

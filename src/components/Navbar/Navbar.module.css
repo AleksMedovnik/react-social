@@ -10,10 +10,11 @@
     z-index: 1;
 }
 .nav__item{
-    display: block;
     margin-top: 10px;
+}
+.nav__item a{
     transition: 0.5s;
 }
-.active, .nav__item:hover{
+.nav__item a.activeLink, .nav__item a:hover{
     color: rgb(240, 144, 144);
 }
