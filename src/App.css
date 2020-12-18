@@ -8,13 +8,14 @@ html{
     margin: 0;
     padding: 0;
     color: rgb(239, 239, 243);
+    font-family: 'Ubuntu', sans-serif;
     
 }
 body{
     padding: 10px 10vw;
     font-size: 1.2rem;
     background: rgb(0, 0, 10);
-    font-family: 'Ubuntu', sans-serif;
+   
 } 
 a{
     text-decoration: none;

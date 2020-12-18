@@ -3,12 +3,15 @@ import Dialogs from './Dialogs/Dialogs';
 import classes from './Main.module.css';
 import Profile from './Profile/Profile';
 
-const Main = () => {
+
+
+const Main = (props) => {
+
   return (
 
     <div className={classes.main}>
-      <Route exact path={["/","/profile"]} component={Profile} />
-      <Route path='/dialogs' component={Dialogs} />
+      <Route exact path={["/", "/profile"]} render={() => <Profile />} />
+      <Route path='/dialogs' render={() => <Dialogs dialogData={props.dialogData} />} />
     </div>
   );
 };
