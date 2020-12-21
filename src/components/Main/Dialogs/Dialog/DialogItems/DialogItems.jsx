@@ -14,7 +14,7 @@ const DialogItems = (props) => {
             <NavLink to={`/dialogs/${props.id}`} className={classes.dialog__item}>
                 <img src={ava} alt="Avatar" />
                 <div className={`post__input ${classes.post}`}>{props.name}</div>
-                <input name="message" ref={newDialog} className={classes.textMessage} cols="30" rows="1"></input>
+                <input name="message" ref={newDialog} className='post__input' />
                 <button onClick={addDialog}>Submit</button>
             </NavLink>
         </form>

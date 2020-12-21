@@ -3,7 +3,7 @@ import classes from './Profile.module.css';
 import ava from '../../../images/ava.png';
 
 
-const Profile = () => {
+const Profile = (props) => {
     return (
         <div className={classes.main__profile}>
             <div className={classes.profile}>
@@ -14,7 +14,7 @@ const Profile = () => {
                     <a href='#' className={classes.profile__info}>Показать подробную информацию...</a>
                 </div>
             </div>
-            <MyPosts />
+            <MyPosts postData={props.profilePage.postData} addPost={props.addPost} />
         </div>
     )
 }

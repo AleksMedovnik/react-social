@@ -13,7 +13,7 @@ const App = (props) => {
       <div className='app-wrapper'>
         <Header />
         <Navbar />
-        <Main dialogData={props.dialogData} />
+        <Main state={props.state} addPost={props.addPost} />
       </div>
     </BrowserRouter>
 

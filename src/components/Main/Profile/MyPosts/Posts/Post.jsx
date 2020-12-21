@@ -1,12 +1,13 @@
 import classes from './Post.module.css';
 import ava from '../../../../../images/ava.png';
+import { NavLink } from 'react-router-dom';
 
 const Post = (props) => {
     return (
-        <div className={classes.post}>
+        <NavLink to={`/profile/${props.id}`} className={`post__input ${classes.post}`}>
             <img src={ava} alt="Avatar" />
-            <div className='post__input'>{props.message}</div>
-        </div>
+            <div >{props.post}</div>
+        </NavLink>
     )
 }
 
