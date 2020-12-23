@@ -2,7 +2,6 @@ import classes from './MyPosts.module.css';
 import Post from './Posts/Post';
 import ava from '../../../../images/ava.png';
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
 
 const MyPosts = (props) => {
@@ -18,7 +17,7 @@ const MyPosts = (props) => {
         <div>
             <form className={classes.postMessage}>
                 <img src={ava} alt="Avatar" />
-                <input ref={newPost} name="post" className='post__input' size='45' />
+                <textarea ref={newPost} name="post" className='post__input' size='45' />
                 <div onClick={addMessage} className='post__input'>Submit</div>
             </form>
           
