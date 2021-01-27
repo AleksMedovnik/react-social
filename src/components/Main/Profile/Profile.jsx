@@ -13,7 +13,7 @@ const Profile = (props) => {
                     <a href='#' className={classes.profile__info}>Показать подробную информацию...</a>
                 </div>
             </div>
-            <MyPosts postData={props.profilePage.postData} addPost={props.addPost} newPostText={props.profilePage.newPostText} updateNewPostText={props.updateNewPostText}/>
+            <MyPosts postData={props.profilePage.postData} dispatch={props.dispatch} newPostText={props.profilePage.newPostText} />
         </div>
     )
 }

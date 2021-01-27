@@ -10,7 +10,7 @@ const Main = (props) => {
   return (
 
     <div className={classes.main}>
-      <Route exact path={["/", "/profile"]} render={() => <Profile profilePage={props.state.profilePage} addPost={props.addPost} updateNewPostText={props.updateNewPostText} />} />
+      <Route exact path={["/", "/profile"]} render={() => <Profile profilePage={props.state.profilePage} dispatch={props.dispatch} />} />
       <Route path='/dialogs' render={() => <Dialogs messagesPage={props.state.messagesPage} />} />
     </div>
   );
