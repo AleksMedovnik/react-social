@@ -2,19 +2,24 @@ import classes from './MyPosts.module.css';
 import Post from './Posts/Post';
 import ava from '../../../../images/ava.png';
 import React from 'react';
+import {addPostActionCreator, updateNewPostTextActionCreator} from '../../../../redux/state';
+
 
 
 const MyPosts = (props) => {
 
+
     let newPost = React.createRef();
-    
+
     let addMessage = () => {
-        props.dispatch({type: 'ADD-POST'});
+        let action = addPostActionCreator();
+        props.dispatch(action);
     }
 
     const newPostChange = () => {
         let text = newPost.current.value;
-        props.dispatch({type: 'UPDATE-NEW-POST-TEXT', newPostText: text});
+        let action = updateNewPostTextActionCreator(text);
+        props.dispatch(action);
     }
 
 
