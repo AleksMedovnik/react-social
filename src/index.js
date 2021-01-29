@@ -8,7 +8,7 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 
 
-const renderEntireTree = state => {
+const renderEntireTree = state => { // отрисовка приложения
     ReactDOM.render(
       <BrowserRouter>
           <App state={state} addPost={store.addPost.bind(store)} updateNewPostText={store.updateNewPostText.bind(store)} />
@@ -16,10 +16,7 @@ const renderEntireTree = state => {
       );
 }
 
-store.subscribe(renderEntireTree);
+store.subscribe(renderEntireTree); // передаем функцию в store
 renderEntireTree(store.getState());
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

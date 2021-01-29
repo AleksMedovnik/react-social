@@ -42,7 +42,7 @@ const store = {
     return this._state;
   },
 
-  _callSubscriber() {
+  _callSubscriber() { // пока функция-пустышка
     console.log('');
   },
 
@@ -62,7 +62,7 @@ const store = {
   },
 
   subscribe(observer) {
-    this._callSubscriber = observer;
+    this._callSubscriber = observer; // пустышку переприсваиваем в другую функцию 
   },
 
 }
