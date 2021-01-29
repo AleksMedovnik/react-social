@@ -19,7 +19,10 @@ const renderEntireTree = state => {
 store.subscribe(renderEntireTree);
 renderEntireTree(store.getState());
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals();
+
+
+// Добавляем dispatch(action) в state
+// Передаем по props в MyPosts
+// Вызываем dispatch(action) в MyPosts
