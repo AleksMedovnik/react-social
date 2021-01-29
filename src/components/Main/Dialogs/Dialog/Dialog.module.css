@@ -1,0 +1,8 @@
+.dialog{
+    display: flex;
+    justify-content: space-around;
+
+}
+.dialog__input button, .dialog__input textarea{
+    color: black;
+}

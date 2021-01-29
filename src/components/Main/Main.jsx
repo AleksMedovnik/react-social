@@ -11,7 +11,7 @@ const Main = (props) => {
 
     <div className={classes.main}>
       <Route exact path={["/", "/profile"]} render={() => <Profile profilePage={props.state.profilePage} dispatch={props.dispatch} />} />
-      <Route path='/dialogs' render={() => <Dialogs messagesPage={props.state.messagesPage} />} />
+      <Route path='/dialogs' render={() => <Dialogs messagesPage={props.state.messagesPage} dispatch={props.dispatch} />} />
     </div>
   );
 };
