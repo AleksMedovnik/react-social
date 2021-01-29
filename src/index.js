@@ -23,6 +23,6 @@ renderEntireTree(store.getState());
 reportWebVitals();
 
 
-// Добавляем dispatch(action) в state
+// state -> dispatch(action)
 // Передаем по props в MyPosts
 // Вызываем dispatch(action) в MyPosts
