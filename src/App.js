@@ -11,6 +11,7 @@ const App = (props) => {
   return (
     
       <div className='app-wrapper'>
+        
         <Header />
         <Navbar />
         <Main state={props.state} dispatch={props.dispatch} />
