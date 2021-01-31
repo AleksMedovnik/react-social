@@ -24,3 +24,5 @@ reportWebVitals();
 
 // state -> dispatch -> SEND_MESSAGE + UPDATE_NEW_MESSAGE_BODY
 // dialog -> onSenMessageClick + onNewMessageChange
+
+// homework: Внести изменения в файл MyPosts.jsx. Заменить ref на event.target
