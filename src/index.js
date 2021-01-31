@@ -26,3 +26,5 @@ reportWebVitals();
 // state -> dispatch(action)
 // Передаем по props в MyPosts
 // Вызываем dispatch(action) в MyPosts
+
+// homework: В файле state.js заменить конструкцию if конструкцией switch 
