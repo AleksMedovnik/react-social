@@ -22,5 +22,5 @@ renderEntireTree(store.getState());
 
 reportWebVitals();
 
-// MyPosts -> addPostActionCreator + updateNewPostTextActionCreator
+// state && MyPosts -> addPostActionCreator + updateNewPostTextActionCreator
 // state -> const
