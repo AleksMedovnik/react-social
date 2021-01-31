@@ -24,3 +24,5 @@ reportWebVitals();
 
 // state && MyPosts -> addPostActionCreator + updateNewPostTextActionCreator
 // state -> const
+
+// homework: В файле MyPosts внести изменения в функцию newPostChange() с использоваием функции updateNewPostTextActionCreator
