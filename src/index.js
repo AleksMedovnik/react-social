@@ -22,5 +22,4 @@ renderEntireTree(store.getState());
 
 reportWebVitals();
 
-// state -> dispatch -> SEND_MESSAGE + UPDATE_NEW_MESSAGE_BODY
-// dialog -> onSenMessageClick + onNewMessageChange
+// MyPosts -> delete Ref() && added e.target.value

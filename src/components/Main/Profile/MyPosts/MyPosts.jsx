@@ -9,15 +9,13 @@ import {addPostActionCreator, updateNewPostTextActionCreator} from '../../../../
 const MyPosts = (props) => {
 
 
-    let newPost = React.createRef();
-
     let addMessage = () => {
         let action = addPostActionCreator();
         props.dispatch(action);
     }
 
-    const newPostChange = () => {
-        let text = newPost.current.value;
+    const newPostChange = (e) => {
+        let text = e.target.value;
         let action = updateNewPostTextActionCreator(text);
         props.dispatch(action);
     }
@@ -28,7 +26,7 @@ const MyPosts = (props) => {
         <div>
             <form className={classes.postMessage}>
                 <img src={ava} alt="Avatar" />
-                <textarea ref={newPost} onChange={newPostChange} value={props.newPostText} name="post" className='post__input' cols='50' rows='1' />
+                <textarea onChange={newPostChange} value={props.newPostText} name="post" className='post__input' cols='50' rows='1' />
                 <div onClick={addMessage} className='post__input'>Submit</div>
             </form>
 
