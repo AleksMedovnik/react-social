@@ -1,5 +1,7 @@
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+import dialogReducer from "./dialogReducer";
+import profileReducer from "./profileReducer";
+
+
 const SEND_MESSAGE = 'SEND-MESSAGE';
 const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY';
 
@@ -72,67 +74,13 @@ const store = {
   },
 
   dispatch(action) {
-    switch (action.type) {
+    this._state.profilePage = profileReducer(this._state.profilePage, action);
+    this._state.messagesPage = dialogReducer(this._state.messagesPage, action);
+    this._callSubscriber(this._state);
 
-      case ADD_POST:
-        let newPost = {
-          post: this._state.profilePage.newPostText,
-          id: this._state.profilePage.postData[0].id + 1
-        };
-        this._state.profilePage.postData.unshift(newPost);
-        this._state.profilePage.newPostText = '';
-        this._callSubscriber(this._state);
-        break;
-
-      case UPDATE_NEW_POST_TEXT:
-        this._state.profilePage.newPostText = action.newPostText;
-        this._callSubscriber(this._state);
-        break;
-
-      case UPDATE_NEW_MESSAGE_BODY:
-        this._state.messagesPage.newMessageBody = action.body;
-        this._callSubscriber(this._state);
-        break;
-
-      case SEND_MESSAGE:
-        let newMessage = { 
-          message: this._state.messagesPage.newMessageBody, 
-          id: this._state.messagesPage.messages[0].id + 1
-        };
-        this._state.messagesPage.messages.unshift(newMessage);
-        this._state.messagesPage.newMessageBody = '';
-        this._callSubscriber(this._state);
-        break;
-
-    }
   }
 };
 
-
-
-
-export const addPostActionCreator = () => {
-  return {
-    type: ADD_POST
-  }
-};
-export const updateNewPostTextActionCreator = (text) => {
-  return {
-    type: UPDATE_NEW_POST_TEXT,
-    newPostText: text
-  }
-};
-export const sendMessageCreator = () => {
-  return {
-    type: SEND_MESSAGE
-  }
-};
-export const updateNewMessageBodyCreator = (body) => {
-  return {
-    type: UPDATE_NEW_MESSAGE_BODY,
-    body: body
-  }
-};
 
 export default store;
 window.store = store;
