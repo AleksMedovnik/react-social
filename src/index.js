@@ -35,4 +35,5 @@ reportWebVitals();
  // index.js -> import store from './redux/reduxStore';
  // index.js -> edit store.subscribe()
 
- // homework: 
+/*  homework: В блоке Main создать страницу News. Страница должна получать данные из Redux аналогично 
+ Profile и Messages */
