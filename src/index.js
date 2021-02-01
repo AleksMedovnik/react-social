@@ -27,12 +27,6 @@ store.subscribe(() => {
 reportWebVitals();
 
 
-/* Внести изменения в файлы profileReducer, dialogReducer. В конструкциях switch удалить
- break, а вместо этого использовать return. Код должен работать корректно! */
+// 
 
- // npm install redux --save
- // redux -> reduxStore.js
- // index.js -> import store from './redux/reduxStore';
- // index.js -> edit store.subscribe()
-
- // homework: 
+// homework: 
