@@ -2,9 +2,6 @@ import dialogReducer from "./dialogReducer";
 import profileReducer from "./profileReducer";
 
 
-const SEND_MESSAGE = 'SEND-MESSAGE';
-const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY';
-
 
 const store = {
 
@@ -82,5 +79,5 @@ const store = {
 };
 
 
-export default store;
-window.store = store;
+// export default store;
+// window.store = store;
