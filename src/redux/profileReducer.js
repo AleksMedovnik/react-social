@@ -11,13 +11,15 @@ const profileReducer = (state, action) => {
             };
             state.postData.unshift(newPost);
             state.newPostText = '';
-            break;
+            return state;
 
         case UPDATE_NEW_POST_TEXT:
             state.newPostText = action.newPostText;
-            break;
+            return state;
+
+        default:
+            return state;
     }
-    return state;
 };
 
 

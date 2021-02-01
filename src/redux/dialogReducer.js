@@ -6,7 +6,7 @@ const dialogReducer = (state, action) => {
 
         case UPDATE_NEW_MESSAGE_BODY:
             state.newMessageBody = action.body;
-            break;
+            return state;
 
         case SEND_MESSAGE:
             let newMessage = {
@@ -15,9 +15,11 @@ const dialogReducer = (state, action) => {
             };
             state.messages.unshift(newMessage);
             state.newMessageBody = '';
-            break;
+            return state;
+
+        default:
+            return state;
     }
-    return state;
 };
 
 

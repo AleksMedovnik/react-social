@@ -22,11 +22,6 @@ renderEntireTree(store.getState());
 
 reportWebVitals();
 
-// MyPosts -> delete Ref() && added e.target.value
-// redux -> profileReducer, dialogReducer 
-// state -> edit dispatch(action)
-// store -> functions-Creators -> profileReducer, dialogReducer  (перенести константы из state)
-// MyPosts && Dialog: edit imports
 
-/* homework: Внести изменения в файлы profileReducer, dialogReducer. В конструкциях switch удалить
+/* Внести изменения в файлы profileReducer, dialogReducer. В конструкциях switch удалить
  break, а вместо этого использовать return. Код должен работать корректно! */
