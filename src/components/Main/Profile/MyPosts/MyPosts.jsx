@@ -23,7 +23,7 @@ const MyPosts = (props) => {
         <div>
             <form className={classes.postMessage}>
                 <img src={ava} alt="Avatar" />
-                <textarea ref={newPost} onChange={newPostChange} value="Hello, World" name="post" className='post__input' cols='50' rows='1' />
+                <textarea ref={newPost}  onChange={newPostChange}  name="post" className='post__input' cols='50' rows='1' />
                 <div onClick={addMessage} className='post__input'>Submit</div>
             </form>
 
