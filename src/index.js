@@ -20,3 +20,6 @@ store.subscribe(renderEntireTree); // передаем функцию в store
 renderEntireTree(store.getState());
 
 reportWebVitals();
+
+
+// homework: В файле MyPosts в <textarea> должно выводится значение из store._state.profilePage.newPostText
