@@ -2,7 +2,7 @@ const SEND_MESSAGE = 'SEND-MESSAGE';
 const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY';
 
 let initialState = {
-    newMessageBody: '',
+    newMessageBody: 'Hello my friend!',
 
     dialogData: [
       { name: 'Alex', id: 8 },
