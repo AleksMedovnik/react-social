@@ -1,4 +1,4 @@
-import MyPosts from './MyPosts/MyPosts';
+import MyPostsContainer from './MyPosts/MyPostsContainer';
 import classes from './Profile.module.css';
 import ava from '../../../images/ava.png';
 
@@ -13,7 +13,7 @@ const Profile = (props) => {
                     <a href='#' className={classes.profile__info}>Показать подробную информацию...</a>
                 </div>
             </div>
-            <MyPosts postData={props.profilePage.postData} dispatch={props.dispatch} newPostText={props.profilePage.newPostText} />
+            <MyPostsContainer postData={props.profilePage.postData} dispatch={props.dispatch} newPostText={props.profilePage.newPostText} />
         </div>
     )
 }

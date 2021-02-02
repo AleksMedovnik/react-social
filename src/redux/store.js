@@ -9,7 +9,7 @@ const store = {
 
     profilePage: {
 
-      newPostText: '',
+      newPostText: 'Hello, World!!!',
 
       postData: [
         { post: 'Хорошего вечера!', id: 12 },

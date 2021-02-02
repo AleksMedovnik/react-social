@@ -3,7 +3,7 @@ const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
 let initialState = {
 
-    newPostText: '',
+    newPostText: 'Hello, World!',
 
     postData: [
         { post: 'Хорошего вечера!', id: 12 },

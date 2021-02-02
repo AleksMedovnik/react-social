@@ -2,22 +2,19 @@ import classes from './MyPosts.module.css';
 import Post from './Posts/Post';
 import ava from '../../../../images/ava.png';
 import React from 'react';
-import {addPostActionCreator, updateNewPostTextActionCreator} from '../../../../redux/profileReducer';
 
 
 
 const MyPosts = (props) => {
 
 
-    let addMessage = () => {
-        let action = addPostActionCreator();
-        props.dispatch(action);
+    const addMessage = () => {
+        props.addPost();
     }
 
     const newPostChange = (e) => {
         let text = e.target.value;
-        let action = updateNewPostTextActionCreator(text);
-        props.dispatch(action);
+        props.updateNewPostText(text);
     }
 
 
