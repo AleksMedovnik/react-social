@@ -13,7 +13,7 @@ const Profile = (props) => {
                     <a href='#' className={classes.profile__info}>Показать подробную информацию...</a>
                 </div>
             </div>
-            <MyPostsContainer postData={props.profilePage.postData} dispatch={props.dispatch} newPostText={props.profilePage.newPostText} />
+            <MyPostsContainer store={props.store} />
         </div>
     )
 }

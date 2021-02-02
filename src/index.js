@@ -8,25 +8,22 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 
 
-const renderEntireTree = state => {
+const renderEntireTree = () => {
     ReactDOM.render(
       <BrowserRouter>
-          <App state={state} dispatch={store.dispatch.bind(store)} />
+          <App store={store} />
       </BrowserRouter>, document.getElementById('root')
       );
 }
 
-renderEntireTree(store.getState());
-store.subscribe(() => {
-    let state = store.getState();
-    renderEntireTree(state);
-});
-
-
+renderEntireTree();
+store.subscribe(renderEntireTree);
 
 reportWebVitals();
 
 
-// 
+// Прогнать store по props
+// MyPosts -> MyPostsContainer.js
+// Edit MyPosts.js
 
 // homework: 

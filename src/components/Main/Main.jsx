@@ -10,8 +10,8 @@ const Main = (props) => {
   return (
 
     <div className={classes.main}>
-      <Route exact path={["/", "/profile"]} render={() => <Profile profilePage={props.state.profilePage} dispatch={props.dispatch} />} />
-      <Route path='/dialogs' render={() => <Dialogs messagesPage={props.state.messagesPage} dispatch={props.dispatch} />} />
+      <Route exact path={["/", "/profile"]} render={() => <Profile store={props.store} />} />
+      <Route path='/dialogs' render={() => <Dialogs store={props.store} />} />
     </div>
   );
 };
