@@ -22,6 +22,7 @@ renderEntireTree(store.getState());
 
 reportWebVitals();
 
+// MyPosts -> textarea.value = newPostText
 
 // state -> dispatch(action)
 // Передаем по props в MyPosts
