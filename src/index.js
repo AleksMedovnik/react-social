@@ -22,8 +22,4 @@ store.subscribe(renderEntireTree);
 reportWebVitals();
 
 
-// Прогнать store по props
-// MyPosts -> MyPostsContainer.js
-// Edit MyPosts.js
-
-// homework: 
+// Create DialogContainer
