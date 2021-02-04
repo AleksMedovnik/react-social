@@ -3,7 +3,7 @@ import classes from './Profile.module.css';
 import ava from '../../../images/ava.png';
 
 
-const Profile = (props) => {
+const Profile = () => {
     return (
         <div className={classes.main__profile}>
             <div className={classes.profile}>

@@ -5,7 +5,7 @@ import Profile from './Profile/Profile';
 
 
 
-const Main = (props) => {
+const Main = () => {
 
   return (
 

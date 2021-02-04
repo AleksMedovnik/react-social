@@ -27,4 +27,7 @@ reportWebVitals();
 
 // Create DialogContainer
 // Create storeContext
-// Edit index.js, 
+// index.js -> storeContext.Provider
+// MyPostsContainer -> storeContext.Consumer
+ 
+// homework: В файл DialogContainer добавить storeContext.Consumer аналогично MyPostsContainer

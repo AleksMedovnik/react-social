@@ -6,7 +6,7 @@ import Main from './components/Main/Main';
 
 
 
-const App = (props) => {
+const App = () => {
 
   return (
     
