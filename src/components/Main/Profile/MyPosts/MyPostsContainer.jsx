@@ -2,7 +2,7 @@ import MyPosts from "./MyPosts";
 import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../../redux/profileReducer';
 import storeContext from "../../../../storeContext";
 
-const MyPostsContainer = (props) => {
+const MyPostsContainer = () => {
 
 
     return (
