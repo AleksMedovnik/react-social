@@ -14,7 +14,7 @@ const App = (props) => {
         
         <Header />
         <Navbar />
-        <Main store={props.store} />
+        <Main />
       </div>
 
 

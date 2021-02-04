@@ -6,14 +6,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
+import storeContext from './storeContext';
 
 
 const renderEntireTree = () => {
     ReactDOM.render(
-      <BrowserRouter>
-          <App store={store} />
-      </BrowserRouter>, document.getElementById('root')
-      );
+        <BrowserRouter>
+            <storeContext.Provider value={store}>
+                <App />
+            </storeContext.Provider>
+        </BrowserRouter>, document.getElementById('root')
+    );
 }
 
 renderEntireTree();
@@ -23,3 +26,5 @@ reportWebVitals();
 
 
 // Create DialogContainer
+// Create storeContext
+// Edit index.js, 

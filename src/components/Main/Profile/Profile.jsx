@@ -13,7 +13,7 @@ const Profile = (props) => {
                     <a href='#' className={classes.profile__info}>Показать подробную информацию...</a>
                 </div>
             </div>
-            <MyPostsContainer store={props.store} />
+            <MyPostsContainer />
         </div>
     )
 }
