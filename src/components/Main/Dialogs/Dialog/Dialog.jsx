@@ -3,8 +3,8 @@ import DialogItems from './DialogItems/DialogItems';
 import Messages from './Messages/Messages';
 
 const Dialog = (props) => {
-    let dialogsElements = props.dialogData.map(dialog => <DialogItems name={dialog.name} id={dialog.id} />);
-    let messagesElements = props.messages.map(objMessage => <Messages message={objMessage.message} id={objMessage.id} />);
+    let dialogsElements = props.dialogData.map(dialog => <DialogItems name={dialog.name} key={dialog.id} id={dialog.id} />);
+    let messagesElements = props.messages.map(objMessage => <Messages message={objMessage.message} key={objMessage.id} id={objMessage.id} />);
 
 
     const onSenMessageClick = () => {

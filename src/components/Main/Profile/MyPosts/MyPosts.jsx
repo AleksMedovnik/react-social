@@ -18,7 +18,7 @@ const MyPosts = (props) => {
     }
 
 
-    let postElements = props.postData.map(recording => <Post post={recording.post} id={recording.id} />);
+    let postElements = props.postData.map(d => <Post post={d.post} key={d.id} id={d.id} />);
     return (
         <div>
             <form className={classes.postMessage}>
