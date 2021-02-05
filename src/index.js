@@ -6,15 +6,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-import storeContext from './storeContext';
+import { Provider } from 'react-redux';
 
 
 const renderEntireTree = () => {
     ReactDOM.render(
         <BrowserRouter>
-            <storeContext.Provider value={store}>
+            <Provider store={store}>
                 <App />
-            </storeContext.Provider>
+            </Provider>
         </BrowserRouter>, document.getElementById('root')
     );
 }
@@ -25,9 +25,9 @@ store.subscribe(renderEntireTree);
 reportWebVitals();
 
 
-// Create DialogContainer
-// Create storeContext
-// index.js -> storeContext.Provider
-// MyPostsContainer -> storeContext.Consumer
- 
-// homework: В файл DialogContainer добавить storeContext.Consumer аналогично MyPostsContainer
+// npm install react-redux --save
+// delete storeContext
+// index.js -> Provider
+// MyPostsContainer -> connect
+
+// homework: В файл DialogContainer заменить StoreContext.Consumer на connect аналогично MyPostsContainer
