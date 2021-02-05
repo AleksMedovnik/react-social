@@ -9,7 +9,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 
-const renderEntireTree = () => {
+
     ReactDOM.render(
         <BrowserRouter>
             <Provider store={store}>
@@ -17,18 +17,12 @@ const renderEntireTree = () => {
             </Provider>
         </BrowserRouter>, document.getElementById('root')
     );
-}
 
-renderEntireTree();
-store.subscribe(renderEntireTree);
 
 reportWebVitals();
 
 
-// npm install react-redux --save
-// delete storeContext
-// index.js -> Provider
-// MyPostsContainer -> connect 
-// (Перерисовки приложения не будет, но добавляться данные будут. Проверить можно: вывести в консоль store.getState())
+// ProfileReducer -> stateCopy
 
-// homework: В файл DialogContainer заменить StoreContext.Consumer на connect аналогично MyPostsContainer
+
+// homework: DialogReducer -> stateCopy

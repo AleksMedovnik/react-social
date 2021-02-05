@@ -5,46 +5,51 @@ let initialState = {
     newMessageBody: 'Hello my friend!',
 
     dialogData: [
-      { name: 'Alex', id: 8 },
-      { name: 'Nataly', id: 7 },
-      { name: 'Vasya', id: 6 },
-      { name: 'Marie', id: 5 },
-      { name: 'Lola', id: 4 },
-      { name: 'Nelli', id: 3 },
-      { name: 'Lora', id: 2 },
-      { name: 'Bogdan', id: 1 }
+        { name: 'Alex', id: 8 },
+        { name: 'Nataly', id: 7 },
+        { name: 'Vasya', id: 6 },
+        { name: 'Marie', id: 5 },
+        { name: 'Lola', id: 4 },
+        { name: 'Nelli', id: 3 },
+        { name: 'Lora', id: 2 },
+        { name: 'Bogdan', id: 1 }
     ],
 
     messages: [
-      { message: 'Hello, Alex!', id: 10 },
-      { message: 'By, Alex!', id: 9 },
-      { message: 'Hello, Alex!', id: 8 },
-      { message: 'Хорошего вечера!', id: 7 },
-      { message: 'Доброй ночи!', id: 6 },
-      { message: 'Hello, Alex!', id: 5 },
-      { message: 'Привет!', id: 4 },
-      { message: 'Пока!', id: 3 },
-      { message: 'Доброе утро!', id: 2 },
-      { message: 'Hello, Alex!', id: 1 },
+        { message: 'Hello, Alex!', id: 10 },
+        { message: 'By, Alex!', id: 9 },
+        { message: 'Hello, Alex!', id: 8 },
+        { message: 'Хорошего вечера!', id: 7 },
+        { message: 'Доброй ночи!', id: 6 },
+        { message: 'Hello, Alex!', id: 5 },
+        { message: 'Привет!', id: 4 },
+        { message: 'Пока!', id: 3 },
+        { message: 'Доброе утро!', id: 2 },
+        { message: 'Hello, Alex!', id: 1 },
     ]
-  };
+};
 
 
 const dialogReducer = (state = initialState, action) => {
     switch (action.type) {
 
-        case UPDATE_NEW_MESSAGE_BODY:
-            state.newMessageBody = action.body;
-            return state;
+        case UPDATE_NEW_MESSAGE_BODY: {
+            let stateCopy = {...state};
+            stateCopy.newMessageBody = action.body;
+            return stateCopy;
+        }
 
-        case SEND_MESSAGE:
+        case SEND_MESSAGE: {
             let newMessage = {
                 message: state.newMessageBody,
                 id: state.messages[0].id + 1
             };
-            state.messages.unshift(newMessage);
-            state.newMessageBody = '';
-            return state;
+            let stateCopy = {...state};
+            stateCopy.messages = [...state.messages]
+            stateCopy.messages.unshift(newMessage);
+            stateCopy.newMessageBody = '';
+            return stateCopy;
+        }
 
         default:
             return state;
