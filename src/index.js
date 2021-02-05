@@ -28,6 +28,7 @@ reportWebVitals();
 // npm install react-redux --save
 // delete storeContext
 // index.js -> Provider
-// MyPostsContainer -> connect
+// MyPostsContainer -> connect 
+// (Перерисовки приложения не будет, но добавляться данные будут. Проверить можно: вывести в консоль store.getState())
 
 // homework: В файл DialogContainer заменить StoreContext.Consumer на connect аналогично MyPostsContainer
