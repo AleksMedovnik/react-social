@@ -23,6 +23,6 @@ reportWebVitals();
 
 
 // ProfileReducer -> stateCopy
+// DialogReducer -> stateCopy
 
-
-// homework: DialogReducer -> stateCopy
+// homework: В функциях ProfileReducer & DialogReducer удалить переменную stateCopy и сократить код. Функции должны работать корректно
