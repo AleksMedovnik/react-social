@@ -22,7 +22,7 @@ import { Provider } from 'react-redux';
 reportWebVitals();
 
 
-// ProfileReducer -> stateCopy
-// DialogReducer -> stateCopy
+// В функциях ProfileReducer & DialogReducer удалить переменную stateCopy 
 
-// homework: В функциях ProfileReducer & DialogReducer удалить переменную stateCopy и сократить код. Функции должны работать корректно
+// redux -> usersReduser
+// Main -> Users; NavBar -> users
