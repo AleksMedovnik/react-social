@@ -5,10 +5,10 @@ const SET_USERS = 'SET-USERS';
 let initialState = {
 
     users: [
-        { fullName: 'Хорошего вечера!', id: 1, location: { city: 'Beijing', country: 'China' }, followed: true },
-        { fullName: 'Хорошего вечера!', id: 2, location: { city: 'Tokyo', country: 'Japan' }, followed: true },
-        { fullName: 'Хорошего вечера!', id: 3, location: { city: 'Geneva', country: 'Switzerland' }, followed: true },
-        { fullName: 'Хорошего вечера!', id: 4, location: { city: 'Stockholm', country: 'Sweden' }, followed: true },
+        { fullName: 'Alex Rogin', id: 1, location: { city: 'Beijing', country: 'China' }, followed: true },
+        { fullName: 'Nataly Sylkina', id: 2, location: { city: 'Tokyo', country: 'Japan' }, followed: true },
+        { fullName: 'Dmitry Fox', id: 3, location: { city: 'Geneva', country: 'Switzerland' }, followed: false },
+        { fullName: 'Inna Goyna', id: 4, location: { city: 'Stockholm', country: 'Sweden' }, followed: false },
     ]
 };
 
