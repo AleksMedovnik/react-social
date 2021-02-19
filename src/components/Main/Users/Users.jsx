@@ -5,9 +5,9 @@ import classes from './Users.module.css';
 
 class Users extends React.Component {
     componentDidMount() {
-        axios.get('https://social-network.samuraijs.com/api/1.0/users')
+        axios.get('https://jsonplaceholder.typicode.com/users')
             .then(response => {
-                this.props.setUsers(response.data.items);
+                this.props.setUsers(response.data);
             })
     }
 
@@ -26,8 +26,8 @@ class Users extends React.Component {
                                 <p>
                                     <img src={ava} alt="" />
                                     <br />
-                                    {u.followed ? <button onClick={() => this.props.unfollow(u.id)}>Unfollow</button> :
-                                        <button onClick={() => this.props.follow(u.id)}>Follow</button>}
+                                   {/*  {u.followed ? <button onClick={() => this.props.unfollow(u.id)}>Unfollow</button> :
+                                        <button onClick={() => this.props.follow(u.id)}>Follow</button>} */}
                                 </p>
                             </div>
                         )
