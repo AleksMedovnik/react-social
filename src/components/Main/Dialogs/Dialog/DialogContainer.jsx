@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { sendMessageCreator, updateNewMessageBodyCreator } from '../../../../redux/dialogReducer';
+import { sendMessageCreator, updateNewMessageBodyCreator, setDialogUsers } from '../../../../redux/dialogReducer';
 import Dialog from './Dialog';
 
 
@@ -18,7 +18,8 @@ const mapDispatchToProps = (dispatch) => {
         },
         newMessageChange(body) {
             dispatch(updateNewMessageBodyCreator(body))
-        }
+        },
+        setDialogUsers
     }
 }
 

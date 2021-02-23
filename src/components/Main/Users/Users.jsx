@@ -1,40 +1,52 @@
 import * as axios from 'axios';
 import React, { useEffect } from 'react';
-import ava from '../../../images/ava.png';
 import classes from './Users.module.css';
 
 const Users = (props) => {
+
     useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/users')
-            .then(response => {
-                props.setUsers(response.data);
-            })
+        if (props.users.length == 0) {
+            axios.get('https://jsonplaceholder.typicode.com/users')
+                .then(response => {
+                    props.setUsers(response.data);
+                })
+        }
+
     }, []);
 
-    
-        return (
-            <div>
 
-                {
-                    props.users.map(u => {
-                        return (
-                            <div key={u.id} className={classes.users}>
-                                <p>
-                                    <span>{u.name}</span>
-                                    <br />
-                                </p>
-                                <p>
-                                    <img src={ava} alt="" />
-                                    <br />
-                                   {  u.followed ? <button onClick={() => props.unfollow(u.id)}>Unfollow</button> :
-                                        <button onClick={() => props.follow(u.id)}>Follow</button> }
-                                </p>
+
+
+    return (
+        <div>
+
+            {
+                props.users.map(u => {
+                    return (
+                        <div key={u.id} className={classes.users}>
+                            <div>
+                                <span className={classes.users__name}>{u.name}</span>
+                                <br />
+                                <span className={classes.users__email}>{u.email}</span>
+                                <br />
+                                 <span className={classes.users__address}>{u.address.city}</span> 
+                                <br />
+                                <span className={classes.users__phone}>{u.phone}</span> 
+                                <br />
+                                <span className={classes.users__company}>{u.company.name}</span> 
+                                <br />
                             </div>
-                        )
-                    })
-                }
-            </div>
-        )
+                            <div>
+                                <br />
+                                {u.followed ? <button onClick={() => props.unfollow(u.id)}>Unfollow</button> :
+                                    <button onClick={() => props.follow(u.id)}>Follow</button>}
+                            </div>
+                        </div>
+                    )
+                })
+            }
+        </div>
+    )
 }
 
 export default Users;

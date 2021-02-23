@@ -1,18 +1,19 @@
 const SEND_MESSAGE = 'SEND-MESSAGE';
 const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY';
+const SET_DIALOG_USERS = 'SET-DIALOG-USERS';
 
 let initialState = {
     newMessageBody: 'Hello my friend!',
 
     dialogData: [
-        { name: 'Alex', id: 8 },
+      /*   { name: 'Alex', id: 8 },
         { name: 'Nataly', id: 7 },
         { name: 'Vasya', id: 6 },
         { name: 'Marie', id: 5 },
         { name: 'Lola', id: 4 },
         { name: 'Nelli', id: 3 },
         { name: 'Lora', id: 2 },
-        { name: 'Bogdan', id: 1 }
+        { name: 'Bogdan', id: 1 } */
     ],
 
     messages: [
@@ -50,7 +51,9 @@ const dialogReducer = (state = initialState, action) => {
                 newMessageBody: '',
                 messages: [ ...state.messages, newMessage]
             };
-             
+
+            case SET_DIALOG_USERS:
+                return ({ ...state, dialogData: [...state.dialogData, ...action.dialogData] })
 
         default:
             return state;
@@ -69,5 +72,6 @@ export const updateNewMessageBodyCreator = (body) => {
         body: body
     }
 };
+export const setDialogUsers = (dialogData) => ({ type: SET_DIALOG_USERS, dialogData });
 
 export default dialogReducer;

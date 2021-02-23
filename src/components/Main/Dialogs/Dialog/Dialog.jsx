@@ -1,9 +1,22 @@
 import classes from './Dialog.module.css';
 import DialogItems from './DialogItems/DialogItems';
 import Messages from './Messages/Messages';
+import * as axios from 'axios';
+import React, { useEffect } from 'react';
 
 const Dialog = (props) => {
-    let dialogsElements = props.dialogData.map(dialog => <DialogItems name={dialog.name} key={dialog.id} id={dialog.id} />);
+
+    useEffect(() => {
+        if (props.dialogData.length == 0) {
+            axios.get('https://jsonplaceholder.typicode.com/comments')
+                .then(response => {
+                    props.setDialogUsers(response.data);
+                })
+        }
+
+    }, []);
+
+    let dialogsElements = props.dialogData.map(dialog => <DialogItems name={dialog.username} key={dialog.id} id={dialog.id} />);
     let messagesElements = props.messages.map(objMessage => <Messages message={objMessage.message} key={objMessage.id} id={objMessage.id} />);
 
 
