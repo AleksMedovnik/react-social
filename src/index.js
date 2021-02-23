@@ -28,3 +28,4 @@ reportWebVitals();
 // Users -> useEffect()
 // UsersContainer -> delete mapDispatchToProps & edit connect() & edit import from userReducer
 // userReducer -> edit names of function-cretors
+// dialog -> axios.get()
