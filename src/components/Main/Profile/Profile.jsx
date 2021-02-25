@@ -1,6 +1,5 @@
 import MyPostsContainer from './MyPosts/MyPostsContainer';
 import classes from './Profile.module.css';
-import ava from '../../../images/ava.png';
 import Preloader from '../Preloader/Preloader';
 
 

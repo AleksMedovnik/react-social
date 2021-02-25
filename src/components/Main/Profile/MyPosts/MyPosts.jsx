@@ -6,6 +6,7 @@ import React from 'react';
 
 const MyPosts = (props) => {
 
+
     const addMessage = () => {
         props.addPostActionCreator();
     }
@@ -14,6 +15,8 @@ const MyPosts = (props) => {
         let text = e.target.value;
         props.updateNewPostTextActionCreator(text);
     }
+
+    
 
     let postElements = props.postData.map(d => <Post post={d.post} key={d.id} id={d.id} />);
     return (
