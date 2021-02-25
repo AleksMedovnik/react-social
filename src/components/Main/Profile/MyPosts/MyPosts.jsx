@@ -4,18 +4,16 @@ import ava from '../../../../images/ava.png';
 import React from 'react';
 
 
-
 const MyPosts = (props) => {
 
     const addMessage = () => {
-        props.addPost();
+        props.addPostActionCreator();
     }
 
     const newPostChange = (e) => {
         let text = e.target.value;
-        props.updateNewPostText(text);
+        props.updateNewPostTextActionCreator(text);
     }
-
 
     let postElements = props.postData.map(d => <Post post={d.post} key={d.id} id={d.id} />);
     return (

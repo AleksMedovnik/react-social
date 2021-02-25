@@ -34,3 +34,4 @@ reportWebVitals();
 // edit Route
 // ProfileReducer, ProfileContainer, Profile
 // ProfileContainer -> withRouter()
+// MyPostsContainer ->  edit connect()
