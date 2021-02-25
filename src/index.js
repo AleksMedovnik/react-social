@@ -29,3 +29,8 @@ reportWebVitals();
 // UsersContainer -> delete mapDispatchToProps & edit connect() & edit import from userReducer
 // userReducer -> edit names of function-cretors
 // dialog -> axios.get()
+// DialogContainer ->  edit connect()
+// dialogReducer -> setDialogUsers
+// edit Route
+// ProfileReducer, ProfileContainer, Profile
+// ProfileContainer -> withRouter()

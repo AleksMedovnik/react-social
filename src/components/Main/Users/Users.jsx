@@ -1,5 +1,6 @@
 import * as axios from 'axios';
 import React, { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import classes from './Users.module.css';
 
 const Users = (props) => {
@@ -25,6 +26,7 @@ const Users = (props) => {
                     return (
                         <div key={u.id} className={classes.users}>
                             <div>
+                                <NavLink to={`/profile/${u.id}`}>
                                 <span className={classes.users__name}>{u.name}</span>
                                 <br />
                                 <span className={classes.users__email}>{u.email}</span>
@@ -35,6 +37,7 @@ const Users = (props) => {
                                 <br />
                                 <span className={classes.users__company}>{u.company.name}</span> 
                                 <br />
+                                </NavLink>
                             </div>
                             <div>
                                 <br />

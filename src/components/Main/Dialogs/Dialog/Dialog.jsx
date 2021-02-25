@@ -8,7 +8,8 @@ const Dialog = (props) => {
 
     useEffect(() => {
         if (props.dialogData.length == 0) {
-            axios.get('https://jsonplaceholder.typicode.com/comments')
+         
+            axios.get('https://jsonplaceholder.typicode.com/users')
                 .then(response => {
                     props.setDialogUsers(response.data);
                 })
@@ -21,11 +22,11 @@ const Dialog = (props) => {
 
 
     const onSenMessageClick = () => {
-        props.senMessageClick();
+        props.sendMessageCreator();
     };
     const onNewMessageChange = (e) => {
         let body = e.target.value;
-        props.newMessageChange(body);
+        props.updateNewMessageBodyCreator(body);
     };
 
     return (

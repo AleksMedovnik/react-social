@@ -1,7 +1,6 @@
 .dialog{
-    display: flex;
-    justify-content: space-around;
-
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 .dialog__input button, .dialog__input textarea{
     color: black;

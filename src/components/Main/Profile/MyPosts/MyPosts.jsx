@@ -7,13 +7,6 @@ import React from 'react';
 
 const MyPosts = (props) => {
 
- /*    useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/posts')
-            .then(response => {
-                props.setUsers(response.data);
-            })
-    }, []); */
-
     const addMessage = () => {
         props.addPost();
     }

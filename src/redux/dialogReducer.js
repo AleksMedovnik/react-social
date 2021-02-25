@@ -5,16 +5,7 @@ const SET_DIALOG_USERS = 'SET-DIALOG-USERS';
 let initialState = {
     newMessageBody: 'Hello my friend!',
 
-    dialogData: [
-      /*   { name: 'Alex', id: 8 },
-        { name: 'Nataly', id: 7 },
-        { name: 'Vasya', id: 6 },
-        { name: 'Marie', id: 5 },
-        { name: 'Lola', id: 4 },
-        { name: 'Nelli', id: 3 },
-        { name: 'Lora', id: 2 },
-        { name: 'Bogdan', id: 1 } */
-    ],
+    dialogData: [],
 
     messages: [
         { message: 'Hello, Alex!', id: 10 },
@@ -53,7 +44,7 @@ const dialogReducer = (state = initialState, action) => {
             };
 
             case SET_DIALOG_USERS:
-                return ({ ...state, dialogData: [...state.dialogData, ...action.dialogData] })
+                return { ...state, dialogData: [...state.dialogData, ...action.dialogData] };
 
         default:
             return state;

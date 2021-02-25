@@ -11,18 +11,11 @@ const mapStateToProps = (state) => {
         messages: state.messagesPage.messages
     }
 }
-const mapDispatchToProps = (dispatch) => {
-    return {
-        senMessageClick() {
-            dispatch(sendMessageCreator())
-        },
-        newMessageChange(body) {
-            dispatch(updateNewMessageBodyCreator(body))
-        },
-        setDialogUsers
-    }
-}
 
-const DialogContainer = connect(mapStateToProps, mapDispatchToProps)(Dialog);
+const DialogContainer = connect(mapStateToProps, {
+    sendMessageCreator,
+    updateNewMessageBodyCreator,
+    setDialogUsers
+})(Dialog);
 
 export default DialogContainer; 
