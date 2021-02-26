@@ -1,6 +1,7 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
+const SET_POSTS_USERS = 'SET_POSTS_USERS';
 
 let initialState = {
 
@@ -8,21 +9,7 @@ let initialState = {
 
     profile: null,
 
-    postData: [
-        { post: 'Хорошего вечера!', id: 12 },
-        { post: 'Всем привет!)', id: 11 },
-        { post: 'Салют!', id: 10 },
-        { post: 'Здорово!', id: 9 },
-        { post: 'Hello!', id: 8 },
-        { post: 'Всем привет!)', id: 7 },
-        { post: 'Салют!', id: 6 },
-        { post: 'Hello!', id: 5 },
-        { post: 'Хорошего вечера!', id: 4 },
-        { post: 'Всем привет!)', id: 3 },
-        { post: 'Салют!', id: 2 },
-        { post: 'Hello!', id: 1 },
-
-    ]
+    postData: []
 };
 
 const profileReducer = (state = initialState, action) => {
@@ -52,6 +39,12 @@ const profileReducer = (state = initialState, action) => {
                 profile: action.profile
             };
 
+        case SET_POSTS_USERS:
+            return {
+                ...state,
+                postData: action.postData
+            };
+
         default:
             return state;
     }
@@ -73,6 +66,12 @@ export const setUserProfile = (profile) => {
     return {
         type: SET_USER_PROFILE,
         profile
+    }
+};
+export const setPostsUsers = (postData) => {
+    return {
+        type: SET_POSTS_USERS,
+        postData
     }
 };
 
