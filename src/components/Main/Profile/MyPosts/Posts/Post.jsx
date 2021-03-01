@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom';
 
 const Post = (props) => {
     return (
-        <NavLink to={`/profile/${props.id}`} className={`post__input ${classes.post}`}>
-            <div >{props.title}</div>
-            <div >{props.body}</div>
+        <NavLink to={`/profile/${props.id}`} className={classes.post}>
+            <div className={classes.title}>{props.title}</div>
+            <div className={classes.postBody}>{props.body}</div>
         </NavLink>
     )
 }

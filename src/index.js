@@ -22,4 +22,5 @@ import { Provider } from 'react-redux';
 reportWebVitals();
 
 
-// MyPosts -> Axios
+// MyPosts -> fetch()
+// profileReducer -> fetch()
