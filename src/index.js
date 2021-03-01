@@ -23,4 +23,5 @@ reportWebVitals();
 
 
 // MyPosts -> fetch()
-// profileReducer -> fetch()
+// MyPosts -> edit addPost & fetch() add async-await
+// MyPosts -> edit addPost -> async-await
