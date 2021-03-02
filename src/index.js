@@ -25,3 +25,4 @@ reportWebVitals();
 // MyPosts -> fetch()
 // MyPosts -> edit addPost & fetch() add async-await
 // MyPosts -> edit addPost -> async-await
+// MyPosts -> edit addPost -> axios
