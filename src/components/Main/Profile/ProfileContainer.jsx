@@ -8,6 +8,7 @@ import { withRouter } from "react-router-dom";
 
 const ProfileContainer = (props) => {
     useEffect(() => {
+        // console.log(props);
         let userId = props.match.params.userId;
         if(!userId) userId = 1;
         axios.get(`https://jsonplaceholder.typicode.com/photos/${userId}`)
