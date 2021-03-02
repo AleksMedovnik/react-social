@@ -5,6 +5,7 @@ import * as axios from 'axios';
 
 
 const MyPosts = (props) => {
+    
     useEffect(() => {
         if (props.postData.length == 0) {
             /* fetch('https://jsonplaceholder.typicode.com/posts')
@@ -38,9 +39,24 @@ const MyPosts = (props) => {
                 .then((response) => response.json())
                 .then((json) => props.addPostActionCreator(json));
         } */
-    async function addPost() {
-        let response = await fetch('https://jsonplaceholder.typicode.com/posts', {
-            method: 'POST',
+    /*     async function addPost() {
+            let response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+                method: 'POST',
+                body: JSON.stringify({
+                    title: props.newPostText,
+                    body: props.newPostText,
+                    userId: props.postData[props.postData.length - 1].userId + 1,
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+            });
+            let json = await response.json();
+            props.addPostActionCreator(json);
+        } */
+
+    const addPost = () => {
+        axios.post('https://jsonplaceholder.typicode.com/posts', {
             body: JSON.stringify({
                 title: props.newPostText,
                 body: props.newPostText,
@@ -49,9 +65,9 @@ const MyPosts = (props) => {
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
             },
-        });
-        let json = await response.json();
-        props.addPostActionCreator(json);
+        })
+            .then((response) => JSON.parse(response.data.body))
+            .then((post) => props.addPostActionCreator(post));
     }
 
 
@@ -64,11 +80,11 @@ const MyPosts = (props) => {
 
 
 
-    let postElements = props.postData.map(d => <Post post={d.post} title={d.title} body={d.body} key={d.id} id={d.id} />);
+    let postElements = props.postData.map(d => <Post post={d.post} body={d.body} key={d.id} id={d.id} />);
     return (
         <div>
             <form className={classes.postMessage}>
-                <textarea onChange={newPostChange} value={props.newPostText} name="post" className='post__input' cols='50' rows='1' />
+                <textarea onChange={newPostChange} value={props.newPostText} name="post" className={`post__input ${classes.postInput}`} cols='50' rows='1' />
                 <div onClick={addPost} className='post__input'>Submit</div>
             </form>
 

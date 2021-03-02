@@ -6,9 +6,7 @@
     border-radius: 5px;
     box-shadow: 1px 1px 5px 1px gray;
 }
-.title{
-    color: rgb(240, 144, 144);
-}
 .postBody{
     font-size: 1rem;
+    color: rgb(240, 144, 144);
 }
