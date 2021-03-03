@@ -23,9 +23,16 @@ reportWebVitals();
 
 
 // MyPosts -> fetch()
+// profileReducer -> addPostActionCreator -> post 
 // MyPosts -> edit addPost & fetch() + promise
 // MyPosts -> edit addPost -> async-await
 // MyPosts -> edit addPost -> axios
+// MyPosts -> delePost()
+// Post -> delePost()
+// profileReducer -> deletePostAC
+// MyPostsContainer -> deletePostAC
+// profileReducer -> edit ADD_POST (добавить post в конец)
+// MyPosts -> reverse()
 
 
 /*
@@ -71,7 +78,7 @@ reportWebVitals();
 
         используем Async-await:
 
-        async function f3(){
+        const f3 = async () => {
 			let promise = new Promise((resolve, reject) => {
 				let i = 0;
 				setTimeout(() => {

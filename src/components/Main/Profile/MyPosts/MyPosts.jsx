@@ -5,7 +5,7 @@ import * as axios from 'axios';
 
 
 const MyPosts = (props) => {
-    
+
     useEffect(() => {
         if (props.postData.length == 0) {
             /* fetch('https://jsonplaceholder.typicode.com/posts')
@@ -60,7 +60,8 @@ const MyPosts = (props) => {
             body: JSON.stringify({
                 title: props.newPostText,
                 body: props.newPostText,
-                userId: props.postData[props.postData.length - 1].userId + 1,
+                userId: 1,
+                id: props.postData[props.postData.length - 1].id + 1,
             }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
@@ -68,6 +69,12 @@ const MyPosts = (props) => {
         })
             .then((response) => JSON.parse(response.data.body))
             .then((post) => props.addPostActionCreator(post));
+    }
+
+
+    const deletePost = (id) => {
+        axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
+        .then(() => props.deletePostAC(id));
     }
 
 
@@ -80,13 +87,13 @@ const MyPosts = (props) => {
 
 
 
-    let postElements = props.postData.map(d => <Post post={d.post} body={d.body} key={d.id} id={d.id} />);
+    let postElements = props.postData.map(d => <Post deletePost={deletePost} body={d.body} key={d.id} id={d.id} />).reverse();
     return (
         <div>
-            <form className={classes.postMessage}>
+            <div className={classes.postMessage}>
                 <textarea onChange={newPostChange} value={props.newPostText} name="post" className={`post__input ${classes.postInput}`} cols='50' rows='1' />
-                <div onClick={addPost} className='post__input'>Submit</div>
-            </form>
+                <button onClick={addPost} className='post__input'>Submit</button>
+            </div>
 
             <div>
                 {postElements}
