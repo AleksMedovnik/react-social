@@ -16,8 +16,7 @@ const Users = (props) => {
     }, []);
 
     const follow = async (id) => {
-        let response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
-            method: 'PUT',
+        axios.put(`https://jsonplaceholder.typicode.com/users/${id}`, {
             body: JSON.stringify({
                 id: id,
                 userId: id,
@@ -26,25 +25,24 @@ const Users = (props) => {
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
             },
-        });
-        let user = await response.json();
-        props.follow(user.userId, user.followed);
+        })
+            .then((response) => JSON.parse(response.data.body))
+            .then((user) => props.follow(user.userId, user.followed));
     }
 
     const unfollow = (id) => {
-        fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
-            method: 'PUT',
-            body: JSON.stringify({
-                id: id,
-                userId: id,
-                followed: false,
-            }),
-            headers: {
-                'Content-type': 'application/json; charset=UTF-8',
-            },
-        })
-            .then((response) => response.json())
-            .then((user) => props.follow(user.userId, user.followed));
+            axios.put(`https://jsonplaceholder.typicode.com/users/${id}`, {
+                body: JSON.stringify({
+                    id: id,
+                    userId: id,
+                    followed: false,
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+            })
+                .then((response) => JSON.parse(response.data.body))
+                .then((user) => props.follow(user.userId, user.followed));
     }
 
 

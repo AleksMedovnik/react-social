@@ -8,13 +8,6 @@ const MyPosts = (props) => {
 
     useEffect(() => {
         if (props.postData.length == 0) {
-            /* fetch('https://jsonplaceholder.typicode.com/posts')
-                .then((response) => response.json())
-                .then(json => {
-                    props.setPostsUsers(json);
-                }) */
-
-
             axios.get('https://jsonplaceholder.typicode.com/posts')
                 .then(response => {
                     props.setPostsUsers(response.data);
@@ -23,37 +16,6 @@ const MyPosts = (props) => {
 
         }
     }, []);
-
-    /*     function addPost() {
-            fetch('https://jsonplaceholder.typicode.com/posts', {
-                method: 'POST',
-                body: JSON.stringify({
-                    title: props.newPostText,
-                    body: props.newPostText,
-                    userId: props.postData[props.postData.length - 1].userId + 1,
-                }),
-                headers: {
-                    'Content-type': 'application/json; charset=UTF-8',
-                },
-            })
-                .then((response) => response.json())
-                .then((json) => props.addPostActionCreator(json));
-        } */
-    /*     async function addPost() {
-            let response = await fetch('https://jsonplaceholder.typicode.com/posts', {
-                method: 'POST',
-                body: JSON.stringify({
-                    title: props.newPostText,
-                    body: props.newPostText,
-                    userId: props.postData[props.postData.length - 1].userId + 1,
-                }),
-                headers: {
-                    'Content-type': 'application/json; charset=UTF-8',
-                },
-            });
-            let json = await response.json();
-            props.addPostActionCreator(json);
-        } */
 
     const addPost = () => {
         axios.post('https://jsonplaceholder.typicode.com/posts', {
