@@ -18,7 +18,6 @@ ReactDOM.render(
     </BrowserRouter>, document.getElementById('root')
 );
 
-
 reportWebVitals();
 
 
@@ -33,6 +32,8 @@ reportWebVitals();
 // MyPostsContainer -> deletePostAC
 // profileReducer -> edit ADD_POST (добавить post в конец)
 // MyPosts -> reverse()
+// Users -> follow/unfollow
+// usersReducer & usersContainer -> delete unfolow
 
 
 /*
