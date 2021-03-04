@@ -26,3 +26,28 @@ reportWebVitals();
 // DialogReducer -> stateCopy
 
 // homework: В функциях ProfileReducer & DialogReducer удалить переменную stateCopy и сократить код. Функции должны работать корректно
+
+/* 
+1. Копирование объекта
+		const o1 = {
+			a: 10,
+			b: [1, 2, 3,],
+		}
+		// const o2 = o1;
+		// o2.b = null;
+		// console.log(o1.b); // null
+
+		const o2 = { ...o1 };
+		// o1.b = null;
+		// console.log(o2.b); // [1, 2, 3,]
+
+		o1.b[0] = 5;
+		console.log(o2.b); // [5, 2, 3,]
+		o1.b[0] = 1;
+		console.log(o1.b); // [1, 2, 3,]
+
+		const o3 = {...o1, b: [...o1.b]}
+		o1.b[0] = 5;
+		console.log(o1.b); // [5, 2, 3,]
+		console.log(o3.b); // [1, 2, 3,]
+*/
