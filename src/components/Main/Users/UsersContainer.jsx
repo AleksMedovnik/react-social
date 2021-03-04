@@ -8,7 +8,7 @@ const mapStateToProps = (state) => ({ users: state.usersPage.users });
 
 const UsersContainer = connect(mapStateToProps, {
     follow,
-    setUsers,    
+    setUsers,
 })(Users);
 
 export default UsersContainer; 

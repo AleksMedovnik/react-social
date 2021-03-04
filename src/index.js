@@ -21,4 +21,8 @@ ReactDOM.render(
 reportWebVitals();
 
 
-// Users -> replaced fetch with axios
+// Users.jsx -> replaced fetch with axios
+// src -> api & api -> api.js
+// api.js -> axios & edit Users.jsx
+// api.js -> setFollowed
+// Users.jsx -> delete unfollow()

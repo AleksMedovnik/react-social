@@ -1,54 +1,22 @@
-import * as axios from 'axios';
 import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import { getUsers, followAPI } from '../../../api/api';
 import classes from './Users.module.css';
 
 const Users = (props) => {
 
     useEffect(() => {
         if (props.users.length == 0) {
-            axios.get('https://jsonplaceholder.typicode.com/users')
-                .then(response => {
-                    props.setUsers(response.data);
-                })
+            getUsers().then(data => props.setUsers(data));
         }
 
     }, []);
 
-    const follow = async (id) => {
-        axios.put(`https://jsonplaceholder.typicode.com/users/${id}`, {
-            body: JSON.stringify({
-                id: id,
-                userId: id,
-                followed: true,
-            }),
-            headers: {
-                'Content-type': 'application/json; charset=UTF-8',
-            },
-        })
-            .then((response) => JSON.parse(response.data.body))
+
+    const follow = (id, followed) => {
+        followAPI(id, followed)
             .then((user) => props.follow(user.userId, user.followed));
     }
-
-    const unfollow = (id) => {
-            axios.put(`https://jsonplaceholder.typicode.com/users/${id}`, {
-                body: JSON.stringify({
-                    id: id,
-                    userId: id,
-                    followed: false,
-                }),
-                headers: {
-                    'Content-type': 'application/json; charset=UTF-8',
-                },
-            })
-                .then((response) => JSON.parse(response.data.body))
-                .then((user) => props.follow(user.userId, user.followed));
-    }
-
-
-
-
-
 
     return (
         <div>
@@ -73,8 +41,8 @@ const Users = (props) => {
                             </div>
                             <div>
                                 <br />
-                                {u.followed ? <button onClick={() => unfollow(u.id)}>Unfollow</button> :
-                                    <button onClick={() => follow(u.id)}>Follow</button>}
+                                {u.followed ? <button onClick={() => follow(u.id, false)}>Unfollow</button> :
+                                    <button onClick={() => follow(u.id, true)}>Follow</button>}
                             </div>
                         </div>
                     )
