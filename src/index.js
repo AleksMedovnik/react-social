@@ -32,6 +32,9 @@ reportWebVitals();
 // DialogContainer ->  edit connect()
 // dialogReducer -> setDialogUsers
 // edit Route
-// ProfileReducer, ProfileContainer, Profile
+// ProfileReducer -> profile, setUserProfile
+// ProfileContainer, Profile -> profile, setUserProfile
+// Main -> Preloader
+// Profile.jsx -> prof.url
 // ProfileContainer -> withRouter()
 // MyPostsContainer ->  edit connect()
