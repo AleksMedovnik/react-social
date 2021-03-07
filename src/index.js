@@ -24,6 +24,7 @@ reportWebVitals();
 
 // В функциях ProfileReducer & DialogReducer удалить переменную stateCopy 
 
+// index - delete renderEntireTree()
 // redux -> usersReduser
 // reduxStore -> usersReduser
 // Main -> Users; NavBar -> users
