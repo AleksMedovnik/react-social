@@ -26,3 +26,5 @@ reportWebVitals();
 // api.js -> axios & edit Users.jsx
 // api.js -> setFollowed
 // Users.jsx -> delete unfollow()
+// userReducer -> toggleInProgress, TOGGLE_IS_FOLLOWING
+// UserContainer -> toggleInProgress, followingInProgress
