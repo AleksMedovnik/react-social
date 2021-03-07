@@ -28,3 +28,4 @@ reportWebVitals();
 // Users.jsx -> delete unfollow()
 // userReducer -> toggleInProgress, TOGGLE_IS_FOLLOWING
 // UserContainer -> toggleInProgress, followingInProgress
+// Users.jsx -> follow -> toggleInProgress & button -> followingInProgress
