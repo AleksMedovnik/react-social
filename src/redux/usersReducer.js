@@ -1,3 +1,5 @@
+import { getUsers, followAPI } from '../api/api';
+
 const FOLLOW = 'FOLLOW';
 const SET_USERS = 'SET-USERS';
 const TOGGLE_IS_FOLLOWING = 'TOGGLE-IS-FOLLOWING';
@@ -31,7 +33,7 @@ const usersReducer = (state = initialState, action) => {
             return {
                 ...state,
                 followingInProgress: action.followed ? [action.id, ...state.followingInProgress] :
-                state.followingInProgress.filter(id => id !== action.id)
+                    state.followingInProgress.filter(id => id !== action.id)
             };
 
         default:
@@ -39,8 +41,22 @@ const usersReducer = (state = initialState, action) => {
     }
 };
 
-export const follow = (useId, followed) => ({ type: FOLLOW, useId, followed });
-export const setUsers = (users) => ({ type: SET_USERS, users });
-export const toggleInProgress = (id, followed) => ({ type: TOGGLE_IS_FOLLOWING, id, followed});
+const follow = (useId, followed) => ({ type: FOLLOW, useId, followed });
+const setUsers = (users) => ({ type: SET_USERS, users });
+const toggleInProgress = (id, followed) => ({ type: TOGGLE_IS_FOLLOWING, id, followed });
+
+export const getUsersThunk = () => {
+    return (dispatch) => {
+        getUsers().then(data => dispatch(setUsers(data)));
+    }
+};
+export const followThunk = (id, followed) => {
+    return (dispatch) => {
+        dispatch(toggleInProgress(id, true));
+        followAPI(id, followed)
+            .then((user) => dispatch(follow(user.userId, user.followed)))
+            .then(() => dispatch(toggleInProgress(id, false)));
+    }
+};
 
 export default usersReducer;

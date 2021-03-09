@@ -1,5 +1,5 @@
 import MyPosts from "./MyPosts";
-import { addPostActionCreator, updateNewPostTextActionCreator, setPostsUsers, deletePostAC } from '../../../../redux/profileReducer';
+import { addPostsUsers, updateNewPostTextActionCreator, deletePostsUsers, getPostsUsers } from '../../../../redux/profileReducer';
 import { connect } from "react-redux";
 
 
@@ -12,8 +12,8 @@ const mapStateToProps = (state) => {
 
 const MyPostsContainer = connect(mapStateToProps, {
     updateNewPostTextActionCreator,
-    addPostActionCreator,
-    setPostsUsers,
-    deletePostAC,
+    deletePostsUsers,
+    getPostsUsers,
+    addPostsUsers
 })(MyPosts);
 export default MyPostsContainer;

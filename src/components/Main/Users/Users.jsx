@@ -1,23 +1,19 @@
 import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { getUsers, followAPI } from '../../../api/api';
 import classes from './Users.module.css';
 
 const Users = (props) => {
 
     useEffect(() => {
         if (props.users.length == 0) {
-            getUsers().then(data => props.setUsers(data));
+            props.getUsersThunk();
         }
 
     }, []);
 
 
     const follow = (id, followed) => {
-        props.toggleInProgress(id, true);
-        followAPI(id, followed)
-            .then((user) => props.follow(user.userId, user.followed))
-            .then(() => props.toggleInProgress(id, false));
+        props.followThunk(id, followed);
     }
 
     return (

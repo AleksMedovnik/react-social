@@ -21,11 +21,17 @@ ReactDOM.render(
 reportWebVitals();
 
 
-// Users.jsx -> replaced fetch with axios
-// src -> api & api -> api.js
-// api.js -> axios & edit Users.jsx
-// api.js -> setFollowed
-// Users.jsx -> delete unfollow()
-// userReducer -> toggleInProgress, TOGGLE_IS_FOLLOWING
-// UserContainer -> toggleInProgress, followingInProgress
-// Users.jsx -> follow -> toggleInProgress & button -> followingInProgress
+// npm install redux-thunk
+// reduxStore -> applyMiddleware
+// usersRedusers -> getUsersThunk & followThunk (import)
+// UsersContainer -> getUsersThunk & followThunk
+// Users.jsx -> getUsersThunk & followThunk
+// UsersContainer -> delete follow & setUsers & toggleInProgress
+// api.js -> getPosts
+// profiReducer -> getPostsUsers
+// MyPostsContainer -> add getPostsUsers & delete setPostsUsers
+// MyPosts -> getPostsUsers 
+// api.js -> addPosts & deletePost
+// profiReducer -> addPostsUsers & deletePostsUsers
+// MyPostsContainer -> addPostsUsers & deletePostsUsers && delete Creators
+// MyPosts -> addPostsUsers & deletePost

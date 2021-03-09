@@ -1,3 +1,5 @@
+import { getPosts, addPosts, deletePost } from '../api/api'
+
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
@@ -47,10 +49,10 @@ const profileReducer = (state = initialState, action) => {
             };
 
         case DELETE_POST:
-                return {
-                    ...state,
-                    postData: state.postData.filter(post => post.id !== action.id),
-                };
+            return {
+                ...state,
+                postData: state.postData.filter(post => post.id !== action.id),
+            };
 
         default:
             return state;
@@ -58,7 +60,7 @@ const profileReducer = (state = initialState, action) => {
 };
 
 
-export const addPostActionCreator = (post) => {
+const addPostActionCreator = (post) => {
     return {
         type: ADD_POST,
         post
@@ -76,16 +78,41 @@ export const setUserProfile = (profile) => {
         profile
     }
 };
-export const setPostsUsers = (postData) => {
+const setPostsUsers = (postData) => {
     return {
         type: SET_POSTS_USERS,
         postData
     }
 };
-export const deletePostAC = (id) => {
+const deletePostAC = (id) => {
     return {
         type: DELETE_POST,
         id
     }
 };
+
+export const getPostsUsers = () => {
+    return dispatch => {
+        getPosts().then(response => {
+            dispatch(setPostsUsers(response.data));
+        });
+    }
+}
+
+export const addPostsUsers = (id, newPostText) => {
+    return dispatch => {
+        addPosts(id, newPostText)
+            .then((response) => JSON.parse(response.data.body))
+            .then((post) => dispatch(addPostActionCreator(post)));
+    }
+}
+
+export const deletePostsUsers = (id) => {
+    return dispatch => {
+        deletePost(id)
+        .then(() => dispatch(deletePostAC(id)));
+    }
+}
+
+
 export default profileReducer;

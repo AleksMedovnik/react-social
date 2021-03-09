@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { follow, setUsers, toggleInProgress } from '../../../redux/usersReducer';
+import { getUsersThunk, followThunk } from '../../../redux/usersReducer';
 import Users from './Users';
 
 
@@ -12,9 +12,8 @@ const mapStateToProps = (state) => {
 };
 
 const UsersContainer = connect(mapStateToProps, {
-    follow,
-    setUsers,
-    toggleInProgress
+    getUsersThunk,
+    followThunk
 })(Users);
 
 export default UsersContainer;
