@@ -110,7 +110,7 @@ export const addPostsUsers = (id, newPostText) => {
 export const deletePostsUsers = (id) => {
     return dispatch => {
         deletePost(id)
-        .then(() => dispatch(deletePostAC(id)));
+            .then(() => dispatch(deletePostAC(id)));
     }
 }
 

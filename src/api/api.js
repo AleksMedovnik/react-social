@@ -1,5 +1,15 @@
 import * as axios from 'axios';
 
+const instance = axios.create({
+    baseURL: 'https://jsonplaceholder.typicode.com/',
+});
+
+// вспомогательные функции _____
+ 
+const headers = {
+    'Content-type': 'application/json; charset=UTF-8',
+}
+
 const setFollowed = (id, followed) => {
     return {
         body: JSON.stringify({
@@ -7,15 +17,11 @@ const setFollowed = (id, followed) => {
             userId: id,
             followed: followed,
         }),
-        headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-        },
+        headers: headers,
     }
 }
 
-const instance = axios.create({
-    baseURL: 'https://jsonplaceholder.typicode.com/',
-});
+// _________
 
 export const getUsers = () => {
     return instance.get('users')
@@ -40,9 +46,7 @@ export const addPosts = (id, newPostText) => {
             userId: 1,
             id,
         }),
-        headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-        },
+        headers: headers,
     })
 
 }

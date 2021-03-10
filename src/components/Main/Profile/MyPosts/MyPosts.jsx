@@ -1,7 +1,6 @@
 import classes from './MyPosts.module.css';
 import Post from './Posts/Post';
 import React, { useEffect } from 'react';
-import * as axios from 'axios';
 
 
 const MyPosts = (props) => {

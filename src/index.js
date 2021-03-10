@@ -35,3 +35,4 @@ reportWebVitals();
 // profiReducer -> addPostsUsers & deletePostsUsers
 // MyPostsContainer -> addPostsUsers & deletePostsUsers && delete Creators
 // MyPosts -> addPostsUsers & deletePost
+// api.js -> headers (вспомогательный объект)
