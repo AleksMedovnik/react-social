@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { connect } from "react-redux";
 import { setUserProfile } from "../../../redux/profileReducer";
 import { withRouter } from "react-router-dom";
+import { withAuthRedirect } from "../../../HOC/withAuthRedirect";
 
 
 const ProfileContainer = (props) => {
@@ -19,12 +20,16 @@ const ProfileContainer = (props) => {
 
     return (
         <div>
-            <Profile prof={props.profile} />
+            <Profile {...props} profile={props.profile} />
         </div>
     )
 }
+
+let AuthRedirectComponents = withAuthRedirect(ProfileContainer); 
+
 let mapStateToProps = (state) => ({
-    profile: state.profilePage.profile
+    profile: state.profilePage.profile,
+    isAuth: state.authLogin.isAuth,
 })
-let WithUrl = withRouter(ProfileContainer);
+let WithUrl = withRouter(AuthRedirectComponents);
 export default connect(mapStateToProps, { setUserProfile })(WithUrl);

@@ -36,3 +36,9 @@ reportWebVitals();
 // MyPostsContainer -> addPostsUsers & deletePostsUsers && delete Creators
 // MyPosts -> addPostsUsers & deletePost
 // api.js -> headers (вспомогательный объект)
+
+// src -> HOC -> withAuthReducer
+// redux -> authReducer.js
+// reduxStore -> authLogin
+// Main -> Route -> Login
+// ProfileContainer -> isAuth & AuthRedirectComponents
