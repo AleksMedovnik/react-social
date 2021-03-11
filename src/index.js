@@ -28,13 +28,15 @@ reportWebVitals();
 // Users -> useEffect()
 // UsersContainer -> delete mapDispatchToProps & edit connect() & edit import from userReducer
 // userReducer -> edit names of function-cretors
+// edit Route
+
+// ProfileReducer -> profile, setUserProfile
+// ProfileContainer -> profile, setUserProfile
+// Main -> Preloader
+// Profile.jsx -> profile.url
+// ProfileContainer -> withRouter()
+// MyPostsContainer ->  edit connect()
+
 // dialog -> axios.get()
 // DialogContainer ->  edit connect()
 // dialogReducer -> setDialogUsers
-// edit Route
-// ProfileReducer -> profile, setUserProfile
-// ProfileContainer, Profile -> profile, setUserProfile
-// Main -> Preloader
-// Profile.jsx -> prof.url
-// ProfileContainer -> withRouter()
-// MyPostsContainer ->  edit connect()
