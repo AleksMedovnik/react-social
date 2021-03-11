@@ -30,4 +30,4 @@ reportWebVitals();
 // Main -> Users; NavBar -> users
 // Users -> UsersContainer
 
-// homework: Сверстать Users
+/* homework: Сверстать Users. Страница должна выводить имя пользователя, email, адрес, телефон и компанию, в которой он работает */
