@@ -1,25 +1,6 @@
 import classes from './Dialog.module.css';
-import DialogItems from './DialogItems/DialogItems';
-import Messages from './Messages/Messages';
-import * as axios from 'axios';
-import React, { useEffect } from 'react';
 
 const Dialog = (props) => {
-
-    useEffect(() => {
-        if (props.dialogData.length == 0) {
-         
-            axios.get('https://jsonplaceholder.typicode.com/users')
-                .then(response => {
-                    props.setDialogUsers(response.data);
-                })
-        }
-
-    }, []);
-
-    let dialogsElements = props.dialogData.map(dialog => <DialogItems name={dialog.username} key={dialog.id} id={dialog.id} />);
-    let messagesElements = props.messages.map(objMessage => <Messages message={objMessage.message} key={objMessage.id} id={objMessage.id} />);
-
 
     const onSenMessageClick = () => {
         props.sendMessageCreator();
@@ -31,9 +12,9 @@ const Dialog = (props) => {
 
     return (
         <div className={classes.dialog}>
-            <div>{dialogsElements}</div>
+            <div>{props.dialogsElements}</div>
             <div>
-                {messagesElements}
+                {props.messagesElements}
                 <div className={classes.dialog__input}>
                     <textarea value={props.newMessageBody} onChange={onNewMessageChange}></textarea><br />
                     <button onClick={onSenMessageClick}>Send</button>

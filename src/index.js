@@ -42,3 +42,9 @@ reportWebVitals();
 // reduxStore -> authLogin
 // Main -> Route -> Login
 // ProfileContainer -> isAuth & AuthRedirectComponents
+
+// MyPostsContainer -> useEffect & functions from MyPosts
+// Edit MyPosts
+
+// Dialog & DialogContainer -> вынести useEffect() & dialogsElements, messagesElements
+// DialogContainer -> isAuth & AuthRedirectComponents
