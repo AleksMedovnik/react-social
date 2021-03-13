@@ -27,9 +27,9 @@ reportWebVitals();
 // npm install axios --save
 // Users -> useEffect()
 // UsersContainer -> delete mapDispatchToProps & edit connect() & edit import from userReducer
-// userReducer -> edit names of function-cretors
+// userReducer -> edit names of function-creators
 // edit Route
-
+// ProfileContainer -> useEffect()
 // ProfileReducer -> profile, setUserProfile
 // ProfileContainer -> profile, setUserProfile
 // Main -> Preloader
