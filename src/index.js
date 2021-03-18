@@ -26,5 +26,6 @@ reportWebVitals();
 
 // MyPostsContainer & DialogContainer & UsersContainer -> compose
 // Profile -> ProfileStatus
+// ProfileStatus -> useState
 // profileReducer -> status & updateStatus
 // ProfileContainer -> status & updateStatus
