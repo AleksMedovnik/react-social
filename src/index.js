@@ -21,30 +21,5 @@ ReactDOM.render(
 reportWebVitals();
 
 
-// npm install redux-thunk
-// reduxStore -> applyMiddleware
-// usersRedusers -> getUsersThunk & followThunk (import)
-// UsersContainer -> getUsersThunk & followThunk
-// Users.jsx -> getUsersThunk & followThunk
-// UsersContainer -> delete follow & setUsers & toggleInProgress
-// api.js -> getPosts
-// profiReducer -> getPostsUsers
-// MyPostsContainer -> add getPostsUsers & delete setPostsUsers
-// MyPosts -> getPostsUsers 
-// api.js -> addPosts & deletePost
-// profiReducer -> addPostsUsers & deletePostsUsers
-// MyPostsContainer -> addPostsUsers & deletePostsUsers && delete Creators
-// MyPosts -> addPostsUsers & deletePost
-// api.js -> headers (вспомогательный объект)
-
-// src -> HOC -> withAuthReducer
-// redux -> authReducer.js
-// reduxStore -> authLogin
-// Main -> Route -> Login
-// ProfileContainer -> isAuth & AuthRedirectComponents
-
-// MyPostsContainer -> useEffect & functions from MyPosts
-// Edit MyPosts
-
-// Dialog & DialogContainer -> вынести useEffect() & dialogsElements, messagesElements
-// DialogContainer -> isAuth & AuthRedirectComponents
+// MyPostsContainer & DialogContainer & UsersContainer -> compose
+// Profile -> 

@@ -6,6 +6,7 @@ import Messages from './Messages/Messages';
 import * as axios from 'axios';
 import React, { useEffect } from 'react';
 import { withAuthRedirect } from '../../../../HOC/withAuthRedirect';
+import { compose } from 'redux';
 
 const DialogContainer = (props) => {
     useEffect(() => {
@@ -29,7 +30,6 @@ const DialogContainer = (props) => {
     )
 }
 
-let AuthRedirectComponents = withAuthRedirect(DialogContainer);
 
 const mapStateToProps = (state) => {
     return {
@@ -39,8 +39,8 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {
+export default compose(connect(mapStateToProps, {
     sendMessageCreator,
     updateNewMessageBodyCreator,
     setDialogUsers
-})(AuthRedirectComponents);
+}), withAuthRedirect)(DialogContainer);

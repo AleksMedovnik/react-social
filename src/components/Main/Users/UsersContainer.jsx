@@ -1,4 +1,7 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
+import { compose } from 'redux';
+import { withAuthRedirect } from '../../../HOC/withAuthRedirect';
 import { getUsersThunk, followThunk } from '../../../redux/usersReducer';
 import Users from './Users';
 
@@ -11,9 +14,8 @@ const mapStateToProps = (state) => {
     }
 };
 
-const UsersContainer = connect(mapStateToProps, {
+export default compose(connect(mapStateToProps, {
     getUsersThunk,
     followThunk
-})(Users);
-
-export default UsersContainer;
+}), withRouter,
+    withAuthRedirect)(Users);
