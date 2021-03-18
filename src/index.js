@@ -20,6 +20,11 @@ ReactDOM.render(
 
 reportWebVitals();
 
+// api -> getUserProfile
+// profileReducer -> setProfile
+// ProfileContainer -> setProfile
 
 // MyPostsContainer & DialogContainer & UsersContainer -> compose
-// Profile -> 
+// Profile -> ProfileStatus
+// profileReducer -> status & updateStatus
+// ProfileContainer -> status & updateStatus

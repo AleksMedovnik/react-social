@@ -1,11 +1,11 @@
 import Profile from "./Profile"
-import * as axios from 'axios';
 import React, { useEffect } from 'react';
 import { connect } from "react-redux";
-import { setUserProfile } from "../../../redux/profileReducer";
 import { withRouter } from "react-router-dom";
 import { withAuthRedirect } from "../../../HOC/withAuthRedirect";
 import { compose } from "redux";
+import { setProfile, updateStatus } from "../../../redux/profileReducer";
+
 
 
 const ProfileContainer = (props) => {
@@ -13,22 +13,20 @@ const ProfileContainer = (props) => {
         // console.log(props);
         let userId = props.match.params.userId;
         if(!userId) userId = 1;
-        axios.get(`https://jsonplaceholder.typicode.com/photos/${userId}`)
-            .then(response => {
-                props.setUserProfile(response.data);
-            })
+        props.setProfile(userId);
     }, []);
 
     return (
         <div>
-            <Profile {...props} profile={props.profile} />
+            <Profile {...props} profile={props.profile} status={props.status} updateStatus={props.updateStatus} />
         </div>
     )
 }
 
 let mapStateToProps = (state) => ({
     profile: state.profilePage.profile,
+    status: state.profilePage.status,
 })
-export default compose(connect(mapStateToProps, { setUserProfile }),
+export default compose(connect(mapStateToProps, { setProfile, updateStatus }),
 withRouter,
 withAuthRedirect)(ProfileContainer);

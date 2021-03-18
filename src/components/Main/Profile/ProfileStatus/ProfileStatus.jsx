@@ -9,7 +9,9 @@ const ProfileStatus = (props) => {
 
     const activateEditmode = (check) => {
         setEditMode(check);
-        // if(check) props.updateStatus(status);
+        if(!check) {
+            props.updateStatus(status);
+        }
     }
     const onChangeStatus = (e) => {
         setStatus(e.target.value);

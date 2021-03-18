@@ -54,3 +54,7 @@ export const addPosts = (id, newPostText) => {
 export const deletePost = (id) => {
     return instance.delete(`posts/${id}`);
 }
+
+export const getUserProfile = (userId) => {
+    return instance.get(`users/${userId}`);
+}

@@ -1,18 +1,17 @@
-import { getPosts, addPosts, deletePost } from '../api/api'
+import { getPosts, addPosts, deletePost, getUserProfile } from '../api/api'
 
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
 const SET_POSTS_USERS = 'SET_POSTS_USERS';
 const DELETE_POST = 'DELETE-POST';
+const UPDATE_STATUS ='UPDATE-STATUS';
 
 let initialState = {
-
     newPostText: '',
-
     profile: null,
-
-    postData: []
+    postData: [],
+    status: 'Hello, my frients!',
 };
 
 const profileReducer = (state = initialState, action) => {
@@ -54,6 +53,13 @@ const profileReducer = (state = initialState, action) => {
                 postData: state.postData.filter(post => post.id !== action.id),
             };
 
+            case UPDATE_STATUS:
+                return {
+                    ...state,
+                    status: action.status,
+                };
+            
+
         default:
             return state;
     }
@@ -72,12 +78,23 @@ export const updateNewPostTextActionCreator = (text) => {
         newPostText: text
     }
 };
-export const setUserProfile = (profile) => {
+const setUserProfile = (profile) => {
     return {
         type: SET_USER_PROFILE,
         profile
     }
 };
+
+export const setProfile = (userId) => {
+    return dispatch => {
+        getUserProfile(userId)
+            .then(response => {
+                dispatch(setUserProfile(response.data));
+            })
+    }
+}
+
+
 const setPostsUsers = (postData) => {
     return {
         type: SET_POSTS_USERS,
@@ -114,5 +131,11 @@ export const deletePostsUsers = (id) => {
     }
 }
 
+export const updateStatus = (status) => {
+    return {
+        type: UPDATE_STATUS,
+        status
+    }
+}
 
 export default profileReducer;

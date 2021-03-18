@@ -2,6 +2,7 @@ import MyPostsContainer from './MyPosts/MyPostsContainer';
 import classes from './Profile.module.css';
 import Preloader from '../Preloader/Preloader';
 import ProfileStatus from './ProfileStatus/ProfileStatus';
+import  ava  from '../../../images/ava.png'
 
 
 const Profile = (props) => {
@@ -9,10 +10,10 @@ const Profile = (props) => {
     return (
         <div className={classes.main__profile}>
             <div className={classes.profile}>
-                <img className={classes.main__avatar} src={props.profile.url} />
+                <img className={classes.main__avatar} src={ava} />
                 <div>
-                    <div className={classes.userName}><b>Alex Honey</b></div>
-                    <ProfileStatus status='Hello, my frients!' />
+                    <div className={classes.userName}><b>{props.profile.name}</b></div>
+                    <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
                     <a href='#' className={classes.profile__info}>Показать подробную информацию...</a>
 
                 </div>

@@ -3,7 +3,6 @@ import { addPostsUsers, updateNewPostTextActionCreator, deletePostsUsers, getPos
 import { connect } from "react-redux";
 import React, { useEffect } from 'react';
 import Post from './Posts/Post';
-import { withAuthRedirect } from "../../../../HOC/withAuthRedirect";
 
 const MyPostsContainer = (props) => {
 
@@ -39,7 +38,6 @@ const MyPostsContainer = (props) => {
     )
 }
 
-// let AuthRedirectComponents = withAuthRedirect(MyPostsContainer);
 
 const mapStateToProps = (state) => {
     return {
