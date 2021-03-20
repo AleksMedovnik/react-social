@@ -130,5 +130,3 @@ reportWebVitals();
 		}
 		f6();
 */
-// video acync
-// https://www.youtube.com/watch?v=8cV4ZvHXQL4&feature=emb_logo
