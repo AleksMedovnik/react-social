@@ -1,17 +1,17 @@
-import { reduxForm } from "redux-form";
 
-const Log = () => {
+
+const LoginForm = () => {
     return (
         <form action="">
             <p>
-                <input type="text" placeholder='Login' />
+                <input type="text" name='userName' placeholder='Login' />
             </p>
             <p>
-                <input type="password" placeholder='Password' />
+                <input type="password" name='password' placeholder='Password' />
             </p>
             <p>
-                <label htmlFor="remembe">Remembe me</label>
-                <input type="checkbox" id='remembe' />
+                <label htmlFor="remembeMe">Remembe me</label>
+                <input type="checkbox" name='remembeMe' id='remembeMe' />
             </p>
             <p>
                 <button type="submit">Submit</button>
@@ -20,5 +20,4 @@ const Log = () => {
     );
 }
 
-const LoginForm = reduxForm({form: 'login'})(Log)
 export default LoginForm;
