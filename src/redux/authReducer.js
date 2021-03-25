@@ -1,6 +1,6 @@
 
 let initialState = {
-    isAuth: true
+    isAuth: 0
 };
 
 const authReducer = (state = initialState, action) => {

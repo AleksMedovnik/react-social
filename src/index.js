@@ -29,3 +29,7 @@ reportWebVitals();
 // ProfileStatus -> useState
 // profileReducer -> status & updateStatus
 // ProfileContainer -> status & updateStatus
+
+// npm install redux-form
+// redux-store -> form (именно form!)
+// login -> LoginForm
