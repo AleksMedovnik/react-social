@@ -33,18 +33,22 @@ const dialogReducer = (state = initialState, action) => {
             };
 
         case SEND_MESSAGE:
-            let newMessage = {
-                message: state.newMessageBody,
-                id: state.messages[0].id + 1
-            };
-            return {
-                ...state,
-                newMessageBody: '',
-                messages: [ ...state.messages, newMessage]
-            };
+            if (state.newMessageBody !== '') {
+                let newMessage = {
+                    message: state.newMessageBody,
+                    id: state.messages[0].id + 1
+                };
+                return {
+                    ...state,
+                    newMessageBody: '',
+                    messages: [...state.messages, newMessage]
+                };
+            }
+            return state;
 
-            case SET_DIALOG_USERS:
-                return { ...state, dialogData: [...state.dialogData, ...action.dialogData] };
+
+        case SET_DIALOG_USERS:
+            return { ...state, dialogData: [...state.dialogData, ...action.dialogData] };
 
         default:
             return state;

@@ -31,5 +31,9 @@ reportWebVitals();
 // ProfileContainer -> status & updateStatus
 
 
-
-// login -> LoginForm
+// npm install --global yarn
+// yarn start 
+// yarn add react-hook-form
+// login -> LoginForm & LoginContainer
+// authReducer -> setIsAuth
+// Min -> LoginContainer
