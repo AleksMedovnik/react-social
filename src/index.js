@@ -36,4 +36,5 @@ reportWebVitals();
 // yarn add react-hook-form
 // login -> LoginForm & LoginContainer
 // authReducer -> setIsAuth
-// Min -> LoginContainer
+// Main -> LoginContainer
+// LoginContainer -> Redirect
