@@ -32,7 +32,12 @@ reportWebVitals();
 
 
 
-/* 		// Задание 1
+/* 
+        const arr = [1, 2, 3, 4, 5];
+		console.log(arr.some(i => i === 0));
+
+
+// Задание 1
 		// В JavaScript есть метод массива reverse()
 		let arr = [1, 2, 3, 4, 5].reverse();
 		console.log(arr); // [5, 4, 3, 2, 1]
