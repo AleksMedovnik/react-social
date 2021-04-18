@@ -8,9 +8,9 @@ const Navbar = () => {
         <li className={classes.nav__item}>
           <NavLink to='/profile' activeClassName={classes.activeLink}>Profile</NavLink>
         </li>
-        <li className={classes.nav__item}>
+       {/*  <li className={classes.nav__item}>
           <NavLink to='/dialogs' activeClassName={classes.activeLink}>Messages</NavLink>
-        </li>
+        </li> */}
         <li className={classes.nav__item}>
           <NavLink to='/users' activeClassName={classes.activeLink}>Users</NavLink>
         </li>
