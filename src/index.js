@@ -20,22 +20,5 @@ ReactDOM.render(
 
 reportWebVitals();
 
-// api -> getUserProfile
-// profileReducer -> setProfile
-// ProfileContainer -> setProfile
-
-// MyPostsContainer & DialogContainer & UsersContainer -> compose
-// Profile -> ProfileStatus
-// ProfileStatus -> useState
-// profileReducer -> status & updateStatus
-// ProfileContainer -> status & updateStatus
-
-
-// npm install --global yarn
-// yarn start 
-// yarn add react-hook-form
-// login -> LoginForm & LoginContainer
-// authReducer -> setIsAuth
-// Main -> LoginContainer
-// LoginContainer -> Redirect
+// yarn add gh-pages --dev
 
