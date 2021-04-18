@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/react-social/static/css/main.cda026bb.chunk.css",
-    "main.js": "/react-social/static/js/main.ddda0901.chunk.js",
-    "main.js.map": "/react-social/static/js/main.ddda0901.chunk.js.map",
-    "runtime-main.js": "/react-social/static/js/runtime-main.5157add6.js",
-    "runtime-main.js.map": "/react-social/static/js/runtime-main.5157add6.js.map",
-    "static/js/2.e5a0f87d.chunk.js": "/react-social/static/js/2.e5a0f87d.chunk.js",
-    "static/js/2.e5a0f87d.chunk.js.map": "/react-social/static/js/2.e5a0f87d.chunk.js.map",
-    "static/js/3.d8f93f25.chunk.js": "/react-social/static/js/3.d8f93f25.chunk.js",
-    "static/js/3.d8f93f25.chunk.js.map": "/react-social/static/js/3.d8f93f25.chunk.js.map",
-    "index.html": "/react-social/index.html",
-    "static/css/main.cda026bb.chunk.css.map": "/react-social/static/css/main.cda026bb.chunk.css.map",
-    "static/js/2.e5a0f87d.chunk.js.LICENSE.txt": "/react-social/static/js/2.e5a0f87d.chunk.js.LICENSE.txt",
-    "static/media/ava.9100baa4.png": "/react-social/static/media/ava.9100baa4.png"
+    "main.css": "/AleksMedovnik/TurnMood.github.io/static/css/main.cda026bb.chunk.css",
+    "main.js": "/AleksMedovnik/TurnMood.github.io/static/js/main.ddda0901.chunk.js",
+    "main.js.map": "/AleksMedovnik/TurnMood.github.io/static/js/main.ddda0901.chunk.js.map",
+    "runtime-main.js": "/AleksMedovnik/TurnMood.github.io/static/js/runtime-main.a8f1cb2b.js",
+    "runtime-main.js.map": "/AleksMedovnik/TurnMood.github.io/static/js/runtime-main.a8f1cb2b.js.map",
+    "static/js/2.e5a0f87d.chunk.js": "/AleksMedovnik/TurnMood.github.io/static/js/2.e5a0f87d.chunk.js",
+    "static/js/2.e5a0f87d.chunk.js.map": "/AleksMedovnik/TurnMood.github.io/static/js/2.e5a0f87d.chunk.js.map",
+    "static/js/3.d8f93f25.chunk.js": "/AleksMedovnik/TurnMood.github.io/static/js/3.d8f93f25.chunk.js",
+    "static/js/3.d8f93f25.chunk.js.map": "/AleksMedovnik/TurnMood.github.io/static/js/3.d8f93f25.chunk.js.map",
+    "index.html": "/AleksMedovnik/TurnMood.github.io/index.html",
+    "static/css/main.cda026bb.chunk.css.map": "/AleksMedovnik/TurnMood.github.io/static/css/main.cda026bb.chunk.css.map",
+    "static/js/2.e5a0f87d.chunk.js.LICENSE.txt": "/AleksMedovnik/TurnMood.github.io/static/js/2.e5a0f87d.chunk.js.LICENSE.txt",
+    "static/media/ava.9100baa4.png": "/AleksMedovnik/TurnMood.github.io/static/media/ava.9100baa4.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.5157add6.js",
+    "static/js/runtime-main.a8f1cb2b.js",
     "static/js/2.e5a0f87d.chunk.js",
     "static/css/main.cda026bb.chunk.css",
     "static/js/main.ddda0901.chunk.js"
