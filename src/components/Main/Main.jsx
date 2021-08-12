@@ -11,7 +11,7 @@ const Main = () => {
   return (
 
     <div className={classes.main}>
-      <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
+      <Route exact path={['/', '/profile/:userId?']} render={() => <ProfileContainer />} />
       <Route path='/dialogs' render={() => <Dialogs />} />
       <Route path='/users' render={() => <UsersContainer />} />
     </div>
